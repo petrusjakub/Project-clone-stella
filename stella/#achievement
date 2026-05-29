@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stella Elsya | Senior Manulife Agent</title>
+    <meta name="description" content="Stella Elsya membantu perencanaan proteksi kesehatan, jiwa, penyakit kritis, pendidikan, dan pensiun sesuai kebutuhan serta kemampuan finansial.">
+    <meta name="keywords" content="asuransi, asuransi jiwa, asuransi kesehatan, Manulife, agen Stella Elsya, Stella Elsya, konsultasi asuransi gratis Stella Elsya">
+    <meta name="theme-color" content="#09194b">
+    <link rel="canonical" href="https://stellaelsya.com/">
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+    <link rel="preload" as="image" href="public/profile-pic-960.webp" imagesrcset="public/profile-pic-480.webp 480w, public/profile-pic-960.webp 960w" imagesizes="(max-width: 1040px) 340px, 360px" type="image/webp">
+    <meta property="og:site_name" content="Stella Elsya">
+    <meta property="og:title" content="Stella Elsya | Senior Manulife Agent">
+    <meta property="og:description" content="Perencanaan proteksi kesehatan, jiwa, penyakit kritis, pendidikan, dan pensiun sesuai kebutuhan serta kemampuan finansial.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stellaelsya.com/">
+    <meta property="og:image" content="https://stellaelsya.com/public/profile-pic.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1323">
+    <meta property="og:image:height" content="1236">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stella Elsya | Senior Manulife Agent">
+    <meta name="twitter:description" content="Perencanaan proteksi kesehatan, jiwa, penyakit kritis, pendidikan, dan pensiun sesuai kebutuhan serta kemampuan finansial.">
+    <meta name="twitter:image" content="https://stellaelsya.com/public/profile-pic.jpg">
+    <meta name="twitter:image:alt" content="Stella Elsya, Senior Manulife Agent">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "InsuranceAgency",
+        "name": "Stella Elsya",
+        "url": "https://stellaelsya.com/",
+        "image": "https://stellaelsya.com/public/profile-pic.jpg",
+        "telephone": "+6282255291890",
+        "areaServed": "Kalimantan Barat, Indonesia",
+        "description": "Perencanaan proteksi kesehatan, jiwa, penyakit kritis, pendidikan, dan pensiun."
+      }
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '990749820094406');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=990749820094406&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.__loadAnalytics = function () {
+        if (window.__analyticsLoaded) return;
+        window.__analyticsLoaded = true;
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-DFERWEYBLL';
+        document.head.appendChild(script);
+        gtag('js', new Date());
+        gtag('config', 'G-DFERWEYBLL');
+      };
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(window.__loadAnalytics, { timeout: 2000 });
+      } else {
+        window.addEventListener('load', window.__loadAnalytics, { once: true });
+      }
+    </script>
+  </head>
+  <body>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=990749820094406&ev=PageView&noscript=1"
+    alt=""></noscript>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Navigasi utama">
+        <a class="brand" href="#home" aria-label="Stella Elsya">
+          <span class="brand-mark">S</span>
+          <span>
+            <strong>Stella Elsya</strong>
+            <small>Senior Manulife Agent</small>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links" id="nav-menu">
+          <a href="#home">Beranda</a>
+          <a href="#trust">Tentang Saya</a>
+          <a href="#achievement">Prestasi</a>
+          <a href="#agents-pick">Produk Pilihan</a>
+          <a href="#products">Produk</a>
+          <a href="#qna-produk">QnA Produk</a>
+          <a href="#fun-facts">Fun Fact</a>
+          <a href="#contact">Kontak</a>
+          <a class="nav-cta" href="https://wa.me/6282255291890?text=Halo%2C%20saya%20liat%20website%20anda%20tentang%20asuransi%2C%20saya%20tanya%20tanya%20boleh%20kah%3F%0Akebutuhan%20saya%20adalah%3A%20" target="_blank" rel="noopener">Konsultasi Gratis</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="pill hero-pill">Perencanaan Aman, Bahasa Sederhana</span>
+            <h1>Membantu perencanaan proteksi sesuai kebutuhan & kemampuan</h1>
+            <p class="hero-subtitle">Selama 19 tahun, saya membantu nasabah memilih proteksi kesehatan, jiwa, dan penyakit kritis ,tabungan pendidikan sesuai prioritas serta kemampuan finansial.</p>
+            <div class="hero-points" aria-label="Nilai layanan utama">
+              <p>Analisis kebutuhan keluarga dan risiko finansial utama.</p>
+              <p>Rekomendasi plan yang realistis dan mudah dipahami.</p>
+              <p>Pendampingan saat review polis hingga proses klaim.</p>
+            </div>
+            <div class="hero-actions">
+              <a class="button primary" href="https://wa.me/6282255291890?text=Halo%2C%20saya%20liat%20website%20anda%20tentang%20asuransi%2C%20saya%20tanya%20tanya%20boleh%20kah%3F%0Akebutuhan%20saya%20adalah%3A%20" target="_blank" rel="noopener">Mulai Konsultasi Gratis</a>
+              <a class="button secondary" href="#products">Lihat Pilihan Produk</a>
+            </div>
+          </div>
+          <figure class="profile-panel">
+            <picture>
+              <source type="image/webp" srcset="public/profile-pic-480.webp 480w, public/profile-pic-960.webp 960w" sizes="(max-width: 1040px) 340px, 360px">
+              <img src="public/profile-pic.jpg" alt="Stella Elsya, Senior Manulife Agent" width="1323" height="1236" loading="eager" fetchpriority="high" decoding="async">
+            </picture>
+            <figcaption>
+              <strong>Stella Elsya</strong>
+              <span>Senior Manulife Agent | Fokus pada proteksi keluarga dan perencanaan finansial jangka panjang.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section trust-section" id="trust">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Mengapa Percaya Pada Saya?</h2>
+            <p>Lebih dari sekadar agen asuransi, saya adalah partner dalam perjalanan finansial Anda.</p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon">
+                <img src="public/calendar-pen-svgrepo-com.svg" alt="" aria-hidden="true">
+              </div>
+              <h3>19 Tahun Pengalaman</h3>
+              <p>Hampir dua dekade mengawal keluarga Indonesia dalam merencanakan masa depan finansial yang lebih baik dan aman.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">
+                <img src="public/personal.svg" alt="" aria-hidden="true">
+              </div>
+              <h3>Perhatian Personal</h3>
+              <p>Saya berusaha mendengarkan, mencatat detail dari klien, untuk memberikan saran dan pelayanan yang komplit.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon">
+                <img src="public/education-svgrepo-com.svg" alt="" aria-hidden="true">
+              </div>
+              <h3>Pendekatan Edukatif</h3>
+              <p>Saya tidak hanya menjual produk, tetapi mengedukasi klien agar mereka memahami setiap keputusan finansial yang dibuat.</p>
+            </article>
+          </div>
+          <blockquote class="quote-card">
+            <p>Setiap orang berdoa untuk keselamatan, tetapi kita perlu mempersiapkan keselamatan itu juga</p>
+            <cite>Stella Elsya, Senior Manulife Agent</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="section achievement-section" id="achievement">
+        <div class="container">
+          <div class="achievement-copy">
+            <div class="achievement-header-grid">
+              <div class="achievement-text">
+                <span class="pill">Track Record</span>
+                <h2>Prestasi dan Pengakuan Profesional</h2>
+                <p>Seluruh penghargaan ini diberikan oleh komite MDRT (Million Dollar Round Table), asosiasi global profesional asuransi jiwa dan jasa keuangan yang memiliki standar etika, kompetensi, dan kinerja tinggi. Bagi agen asuransi, pengakuan MDRT penting karena mencerminkan kredibilitas, konsistensi pelayanan nasabah, serta komitmen terhadap kualitas advice jangka panjang.</p>
+              </div>
+              <figure class="achievement-logo-wrap">
+                <picture>
+                  <img class="mdrt-org-logo" src="public/mdrt-logo.png" alt="Logo organisasi MDRT (Million Dollar Round Table)" width="320" height="320" loading="eager" decoding="async">
+                </picture>
+              </figure>
+            </div>
+            <div class="recognition-grid" aria-label="Daftar tahun penghargaan">
+              <article class="recognition-card">
+                <h3>MDRT</h3>
+                <p>Million Dollar Round Table, pengakuan internasional untuk profesional asuransi jiwa dan jasa keuangan.</p>
+                <div class="year-list">
+                  <span>2012</span>
+                  <span>2013</span>
+                  <span>2014</span>
+                  <span>2016</span>
+                  <span>2017</span>
+                  <span>2018</span>
+                </div>
+              </article>
+              <article class="recognition-card highlight">
+                <h3>COT</h3>
+                <p>Court of the Table, tingkat pengakuan lanjutan dalam MDRT untuk pencapaian yang lebih tinggi.</p>
+                <div class="year-list">
+                  <span>2019</span>
+                  <span>2020</span>
+                  <span>2021</span>
+                  <span>2022</span>
+                  <span>2023</span>
+                  <span>2024</span>
+                  <span>2025</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section picks-section" id="agents-pick">
+        <div class="container">
+          <div class="section-heading">
+            <span class="pill">Agent's Pick</span>
+            <h2>Rekomendasi Produk Pilihan Saya</h2>
+            <p>Produk ada banyak, tapi kalau saya pilih, mungkin ini sih.</p>
+          </div>
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-header">
+                <h3>MiUltimate Critical Care (MUCC)</h3>
+                <span>Recommended</span>
+              </div>
+              <div class="fit-box">
+                <h4>Cocok untuk:</h4>
+                <p>Anda dan keluarga yang menginginkan proteksi menyeluruh terhadap 50 penyakit kritis dengan pengembalian premi.</p>
+              </div>
+              <a class="button primary full" href="https://wa.me/6282255291890?text=halo%20MUCC%20itu%20produk%20yang%20kayak%20gimana%20ya%3F" target="_blank" rel="noopener">Tanya lebih lanjut gratis</a>
+            </article>
+            <article class="product-card">
+              <div class="product-header">
+                <h3>MiUltimate HealthCare (MUHC)</h3>
+                <span>Recommended</span>
+              </div>
+              <div class="fit-box">
+                <h4>Cocok untuk:</h4>
+                <p>Individu ataupun keluarga yang menginginkan perlindungan kesehatan komprehensif dan cashless.</p>
+              </div>
+              <a class="button primary full" href="https://wa.me/6282255291890?text=halo%20MUHC%20itu%20produk%20yang%20kayak%20gimana%20ya%3F" target="_blank" rel="noopener">Tanya lebih lanjut gratis</a>
+            </article>
+          </div>
+          <div class="help-cta">
+            <p>Tidak menemukan produk yang sesuai?</p>
+            <a class="button primary" href="https://api.whatsapp.com/send/?phone=6282255291890&text=Halo saya mau tanya tentang asuransi" target="_blank" rel="noopener">Hubungi Saya</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section products-section" id="products">
+        <div class="container">
+          <div class="section-heading">
+            <span class="pill">Produk Manulife</span>
+            <h2>Pilihan Proteksi Sesuai Kebutuhan</h2>
+            <p>Ringkasan berikut membantu Anda mengenali fungsi utama setiap produk sebelum berdiskusi lebih lanjut.</p>
+          </div>
+          <div class="product-grid expanded">
+            <article class="product-card">
+              <div class="product-header">
+                <h3>MiUltimate HealthCare</h3>
+                <span>Kesehatan</span>
+              </div>
+              <p>Proteksi kesehatan untuk biaya rawat inap dengan kemudahan cashless atau reimbursement, serta pilihan manfaat tambahan sesuai kebutuhan.</p>
+              <div class="fit-box">
+                <h4>Cocok untuk:</h4>
+                <p>Keluarga atau individu yang ingin perlindungan biaya rumah sakit lebih komprehensif.</p>
+              </div>
+              <a class="button primary full" href="https://wa.me/6282255291890?text=Halo%2C%20saya%20mau%20tanya%20tentang%20MiUltimate%20HealthCare" target="_blank" rel="noopener">Tanya produk ini</a>
+            </article>
+            <article class="product-card">
+              <div class="product-header">
+                <h3>MiUltimate Critical Care</h3>
+                <span>Penyakit Kritis</span>
+              </div>
+              <p>Proteksi untuk risiko penyakit kritis, termasuk manfaat saat terdiagnosis kondisi kritis sesuai ketentuan polis.</p>
+              <div class="fit-box">
+                <h4>Cocok untuk:</h4>
+                <p>Anda yang ingin menjaga stabilitas finansial keluarga saat risiko penyakit kritis terjadi.</p>
+              </div>
+              <a class="button primary full" href="https://wa.me/6282255291890?text=Halo%2C%20saya%20mau%20tanya%20tentang%20MiUltimate%20Critical%20Care" target="_blank" rel="noopener">Tanya produk ini</a>
+            </article>
+            <article class="product-card">
+              <div class="product-header">
+                <h3>MiUltimate HealthCare Syariah</h3>
+                <span>Syariah</span>
+              </div>
+              <p>Proteksi kesehatan berbasis syariah dengan manfaat rawat inap dan pilihan manfaat tambahan sesuai plan yang dipilih.</p>
+              <div class="fit-box">
+                <h4>Cocok untuk:</h4>
+                <p>Nasabah yang mencari perlindungan kesehatan dengan prinsip syariah dan fasilitas perawatan rumah sakit.</p>
+              </div>
+              <a class="button primary full" href="https://wa.me/6282255291890?text=Halo%2C%20saya%20mau%20tanya%20tentang%20MiUltimate%20HealthCare%20Syariah" target="_blank" rel="noopener">Tanya produk ini</a>
+            </article>
+            <article class="product-card">
+              <div class="product-header">
+                <h3>Manulife Critical Care Protection</h3>
+                <span>Critical Care</span>
+              </div>
+              <p>Proteksi penyakit kritis dari tahap awal hingga tahap yang lebih serius, dengan manfaat sesuai definisi dan ketentuan polis.</p>
+              <div class="fit-box">
+                <h4>Cocok untuk:</h4>
+                <p>Anda yang ingin perlindungan penyakit kritis lebih luas dan fleksibel mengikuti rencana finansial.</p>
+              </div>
+              <a class="button primary full" href="https://wa.me/6282255291890?text=Halo%2C%20saya%20mau%20tanya%20tentang%20Manulife%20Critical%20Care%20Protection" target="_blank" rel="noopener">Tanya produk ini</a>
+            </article>
+            <article class="product-card">
+              <div class="product-header">
+                <h3>Perencanaan Pensiun</h3>
+                <span>Pensiun</span>
+              </div>
+              <p>Solusi untuk membantu menyiapkan dana masa depan, termasuk pilihan seperti MiFuture Income Protector dan MiGolden Retirement.</p>
+              <div class="fit-box">
+                <h4>Cocok untuk:</h4>
+                <p>Anda yang ingin mulai menyiapkan penghasilan atau dana pensiun dengan lebih terarah.</p>
+              </div>
+              <a class="button primary full" href="https://wa.me/6282255291890?text=Halo%2C%20saya%20mau%20tanya%20tentang%20produk%20pensiun%20Manulife" target="_blank" rel="noopener">Tanya produk ini</a>
+            </article>
+            <article class="product-card">
+              <div class="product-header">
+                <h3>Proteksi dan Investasi</h3>
+                <span>Unit Link</span>
+              </div>
+              <p>Produk yang menggabungkan perlindungan jiwa dengan pilihan investasi, seperti Manulife Dynamic Smart Assurance dan MiSmart Insurance Solution Syariah.</p>
+              <div class="fit-box">
+                <h4>Cocok untuk:</h4>
+                <p>Nasabah yang ingin perlindungan sekaligus potensi pertumbuhan nilai investasi dalam satu rencana.</p>
+              </div>
+              <a class="button primary full" href="https://wa.me/6282255291890?text=Halo%2C%20saya%20mau%20tanya%20tentang%20produk%20proteksi%20dan%20investasi%20Manulife" target="_blank" rel="noopener">Tanya produk ini</a>
+            </article>
+            <article class="product-card">
+              <div class="product-header">
+                <h3>Perlindungan Syariah</h3>
+                <span>Syariah</span>
+              </div>
+              <p>Rangkaian proteksi berbasis syariah untuk kebutuhan kesehatan, pendidikan, perlindungan diri, dan perencanaan keluarga.</p>
+              <div class="fit-box">
+                <h4>Cocok untuk:</h4>
+                <p>Anda yang mengutamakan perlindungan dengan prinsip syariah dan manfaat yang mudah dipahami.</p>
+              </div>
+              <a class="button primary full" href="https://wa.me/6282255291890?text=Halo%2C%20saya%20mau%20tanya%20tentang%20produk%20syariah%20Manulife" target="_blank" rel="noopener">Tanya produk ini</a>
+            </article>
+          </div>
+          <p class="product-note">Informasi di atas adalah ringkasan edukatif. Manfaat, pengecualian, masa pertanggungan, biaya, dan syarat lengkap mengikuti polis serta Ringkasan Informasi Produk dan Layanan resmi Manulife.</p>
+        </div>
+      </section>
+
+      <section class="section qna-section" id="qna-produk">
+        <div class="container">
+          <div class="section-heading">
+            <span class="pill">QnA Produk</span>
+            <h2>7 Pertanyaan Seru: Produk Mana yang Mungkin Cocok?</h2>
+            <p>Isi 7 pertanyaan singkat ini untuk menemukan gambaran produk yang bisa jadi bahan diskusi saat konsultasi.</p>
+          </div>
+          <form class="qna-form" id="qna-form" aria-label="QnA produk">
+            <fieldset class="qna-card">
+              <legend>1) Saat memikirkan risiko, Anda paling khawatir...</legend>
+              <label><input type="radio" name="q1" value="health" required> Tagihan rumah sakit membengkak</label>
+              <label><input type="radio" name="q1" value="critical"> Pendapatan terganggu karena sakit berat</label>
+              <label><input type="radio" name="q1" value="retirement"> Dana hari tua tidak cukup</label>
+            </fieldset>
+            <fieldset class="qna-card">
+              <legend>2) Fokus kebutuhan utama Anda saat ini?</legend>
+              <label><input type="radio" name="q2" value="health" required> Biaya rumah sakit & rawat inap</label>
+              <label><input type="radio" name="q2" value="critical"> Antisipasi penyakit kritis</label>
+              <label><input type="radio" name="q2" value="retirement"> Persiapan dana pensiun</label>
+            </fieldset>
+            <fieldset class="qna-card">
+              <legend>3) Anda ingin manfaat seperti apa?</legend>
+              <label><input type="radio" name="q3" value="health" required> Perlindungan biaya kesehatan</label>
+              <label><input type="radio" name="q3" value="critical"> Santunan saat diagnosis kritis</label>
+              <label><input type="radio" name="q3" value="invest"> Perlindungan + peluang investasi</label>
+            </fieldset>
+            <fieldset class="qna-card">
+              <legend>4) Horizon rencana finansial Anda?</legend>
+              <label><input type="radio" name="q4" value="health" required> Jangka pendek (1-5 tahun)</label>
+              <label><input type="radio" name="q4" value="invest"> Menengah (5-15 tahun)</label>
+              <label><input type="radio" name="q4" value="retirement"> Jangka panjang (15+ tahun)</label>
+            </fieldset>
+            <fieldset class="qna-card">
+              <legend>5) Seberapa penting prinsip syariah?</legend>
+              <label><input type="radio" name="q5" value="syariah" required> Sangat penting</label>
+              <label><input type="radio" name="q5" value="invest"> Netral</label>
+              <label><input type="radio" name="q5" value="critical"> Belum prioritas</label>
+            </fieldset>
+            <fieldset class="qna-card">
+              <legend>6) Anda ingin proteksi digabung dengan investasi?</legend>
+              <label><input type="radio" name="q6" value="invest" required> Ya, saya tertarik</label>
+              <label><input type="radio" name="q6" value="health"> Tidak, fokus proteksi murni</label>
+              <label><input type="radio" name="q6" value="syariah"> Ya, tetapi prefer syariah</label>
+            </fieldset>
+            <fieldset class="qna-card">
+              <legend>7) Gaya keputusan Anda?</legend>
+              <label><input type="radio" name="q7" value="critical" required> Praktis, manfaat jelas</label>
+              <label><input type="radio" name="q7" value="invest"> Fleksibel, suka banyak opsi</label>
+              <label><input type="radio" name="q7" value="retirement"> Terencana untuk masa depan</label>
+            </fieldset>
+            <button class="button primary" type="submit">Lihat hasil fun saya</button>
+          </form>
+
+          <article class="qna-result" id="qna-result" hidden>
+            <p class="pill">Hasil QnA (for fun)</p>
+            <h3 id="qna-result-title"></h3>
+            <p id="qna-result-desc"></p>
+            <a id="qna-result-cta" class="button primary" target="_blank" rel="noopener">Tanya lebih lanjut via WhatsApp</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section funfact-section" id="fun-facts">
+        <div class="container">
+          <div class="section-heading">
+            <span class="pill">Fun Fact</span>
+            <h2>Klaim Asuransi Tidak Cuma Satu Jenis</h2>
+            <p><em>Walaupun namanya sama-sama asuransi, namun ada beberapa jenis asuransi sesuai dengan ketentuan polisnya.</em></p>
+          </div>
+          <div class="funfact-grid">
+            <article class="funfact-card visual">
+              <picture>
+                <source type="image/webp" srcset="public/insurance-claim-types-cover.webp">
+                <img src="public/insurance-claim-types-cover.png" alt="Klaim asuransi itu tidak cuma satu jenis" width="570" height="682" loading="lazy" decoding="async">
+              </picture>
+            </article>
+            <article class="funfact-card visual">
+              <picture>
+                <source type="image/webp" srcset="public/insurance-claim-types-1.webp">
+                <img src="public/insurance-claim-types-1.png" alt="Penggantian biaya kesehatan dan klaim meninggal dunia" width="541" height="628" loading="lazy" decoding="async">
+              </picture>
+            </article>
+            <article class="funfact-card visual">
+              <picture>
+                <source type="image/webp" srcset="public/insurance-claim-types-2.webp">
+                <img src="public/insurance-claim-types-2.png" alt="Klaim manfaat hidup dan maturity claim" width="482" height="642" loading="lazy" decoding="async">
+              </picture>
+            </article>
+          </div>
+          <div class="claim-grid" aria-label="Jenis klaim asuransi">
+            <article class="claim-card">
+              <span>01</span>
+              <h3>Penggantian Biaya Kesehatan</h3>
+              <p>Klaim untuk mengganti biaya perawatan sesuai manfaat dan ketentuan polis.</p>
+            </article>
+            <article class="claim-card">
+              <span>02</span>
+              <h3>Klaim Meninggal Dunia</h3>
+              <p>Manfaat diberikan kepada pihak yang terdaftar sebagai penerima manfaat.</p>
+            </article>
+            <article class="claim-card">
+              <span>03</span>
+              <h3>Klaim Manfaat Hidup</h3>
+              <p>Manfaat yang dapat dicairkan saat tertanggung masih hidup sesuai ketentuan polis.</p>
+            </article>
+            <article class="claim-card">
+              <span>04</span>
+              <h3>Maturity Claim</h3>
+              <p>Pencairan manfaat ketika masa kontrak polis selesai dan manfaat sudah tertera sejak awal.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-grid">
+        <div>
+          <h2>Stella Elsya</h2>
+          <p>19 tahun mengawal masa depan finansial keluarga Indonesia. Bukan sekadar agen, tapi partner terpercaya untuk setiap tahap kehidupan Anda.</p>
+        </div>
+        <address>
+          <strong>Hubungi Saya</strong>
+          <a href="tel:+6282255291890">+62 822-5529-1890</a>
+          <a href="https://wa.me/6282255291890" target="_blank" rel="noopener">WhatsApp: +62 822-5529-1890</a>
+          <span>Kalimantan Barat, Indonesia</span>
+        </address>
+      </div>
+      <div class="footer-bottom">Copyright 2026 Stella Elsya. All rights reserved. | <a href="terms-and-conditions.html">Terms & Conditions</a> | Certified Financial Planner</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
