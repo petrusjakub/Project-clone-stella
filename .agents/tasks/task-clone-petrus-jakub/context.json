@@ -1,0 +1,19 @@
+{
+  "project_type": "Static HTML website (personal branding site for Manulife insurance agent)",
+  "language": "HTML/CSS/JavaScript",
+  "build_system": "None - static files served directly",
+  "test_framework": "None - manual verification via grep",
+  "build_command": "N/A",
+  "test_command": "grep -rn 'Stella Elsya' . && grep -rn '6282255291890' . && grep -rn 'Kalimantan Barat' . && grep -rn 'Senior Manulife Agent' . && grep -rn 'Certified Financial Planner' .",
+  "verification_instructions": "grep for old references (Stella Elsya, 6282255291890, Kalimantan Barat, Senior Manulife Agent, Certified Financial Planner, 19 tahun, COT) should return zero matches",
+  "snapshot_or_generated_files": null,
+  "setup_instructions": "No setup needed - static HTML files",
+  "environment_constraints": "INTEGRATIONS_ONLY network - no external access needed for this static site modification",
+  "contribution_requirements": "None",
+  "key_patterns": "The stella/ folder has already been fully rebranded (FEAT-002 completed). The standalone 'Stella Elsya _ Senior Manulife Agent.html' file at root is a saved webpage copy with embedded CSS and base64-encoded images. It needs all the same branding changes applied.",
+  "relevant_files": [
+    "Stella Elsya _ Senior Manulife Agent.html",
+    "stella/index.html (reference for completed changes)"
+  ],
+  "directory_structure": "Root contains PJ1.jpg, PJ2.jpg, standalone HTML file, and stella/ folder (main site with index.html, terms-and-conditions.html, script.js, styles.css, public/ assets)"
+}

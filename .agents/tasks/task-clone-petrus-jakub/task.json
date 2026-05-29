@@ -1,0 +1,7 @@
+{
+  "task_id": "task-clone-petrus-jakub",
+  "task_description": "Rebrand the Stella Elsya Manulife website to Petrus Jakub, Partner Bisnis Manulife. Update all content, links, photos, and add WhatsApp sticky banner and floating icon.",
+  "status": "in_progress",
+  "feature_order": ["FEAT-002", "FEAT-003"],
+  "blocked_reason": null
+}
