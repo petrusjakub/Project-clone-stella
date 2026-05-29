@@ -2,7 +2,7 @@
   "id": "FEAT-004",
   "type": "fix",
   "description": "Fix hamburger menu button not functioning on mobile and ensure profile photo displays PJ1.jpg correctly with proper object-position.",
-  "status": "in_progress",
+  "status": "completed",
   "steps": [
     "In styles.css - Update .menu-toggle default styles to add cursor: pointer, flex-direction: column, align-items: center, justify-content: center, gap: 4px, padding: 0",
     "In styles.css - In media query @media (max-width: 1040px), change .menu-toggle { display: block; } to .menu-toggle { display: flex; }",
@@ -24,5 +24,5 @@
     "Run: grep -n 'width=\"760\"' stella/index.html (should show in profile img)"
   ],
   "blocked_reason": null,
-  "findings": null
+  "findings": "Hamburger menu was not displaying lines because .menu-toggle used display:none/block without flex layout - the spans had no way to position themselves. Changed to flex with column direction and gap. Also fixed profile image cropping by adding object-position:top so face is visible in square crop."
 }
