@@ -21,6 +21,7 @@ html {
 
 body {
   margin: 0;
+  padding-bottom: 56px;
   color: var(--ink);
   background: var(--surface);
   font-family: Arial, Helvetica, sans-serif;
@@ -892,4 +893,66 @@ address {
 
 .qna-result p {
   color: #2d4b3b;
+}
+
+/* Sticky WA Banner */
+.sticky-wa-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--primary-dark);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+  transition: background 180ms ease;
+}
+
+.sticky-wa-banner:hover {
+  background: #065c38;
+  color: #fff;
+}
+
+.sticky-wa-banner svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.sticky-wa-banner .banner-phone {
+  font-weight: 800;
+}
+
+/* Floating WA Icon */
+.floating-wa {
+  position: fixed;
+  bottom: 76px;
+  right: 20px;
+  z-index: 99;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.floating-wa:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.floating-wa svg {
+  width: 28px;
+  height: 28px;
 }
