@@ -25,27 +25,27 @@ const qnaProducts = {
   health: {
     title: 'MiUltimate HealthCare',
     desc: 'Cocok untuk Anda yang fokus menjaga biaya rawat inap/rawat jalan agar lebih terkontrol dengan manfaat kesehatan komprehensif.',
-    wa: 'https://wa.me/6282255291890?text=Halo%2C%20saya%20baru%20isi%20QnA%20dan%20ingin%20tanya%20tentang%20MiUltimate%20HealthCare.'
+    wa: 'https://wa.me/6287781896087?text=Pak%20Petrus%20saya%20tertarik%20asuransi'
   },
   critical: {
     title: 'MiUltimate Critical Care / Manulife Critical Care Protection',
     desc: 'Cocok bila prioritas Anda antisipasi dampak finansial saat terjadi penyakit kritis pada diri sendiri atau keluarga.',
-    wa: 'https://wa.me/6282255291890?text=Halo%2C%20saya%20baru%20isi%20QnA%20dan%20ingin%20tanya%20tentang%20produk%20critical%20care.'
+    wa: 'https://wa.me/6287781896087?text=Pak%20Petrus%20saya%20tertarik%20asuransi'
   },
   retirement: {
     title: 'MiFuture Income Protector (kategori perencanaan pensiun)',
     desc: 'menjaga kesinambungan dana',
-    wa: 'https://wa.me/6282255291890?text=Halo%2C%20saya%20baru%20isi%20QnA%20dan%20ingin%20tanya%20tentang%20produk%20pensiun.'
+    wa: 'https://wa.me/6287781896087?text=Pak%20Petrus%20saya%20tertarik%20asuransi'
   },
   invest: {
     title: 'Manulife Dynamic Smart Assurance (MDSA)',
     desc: 'Cocok untuk kebutuhan perlindungan jiwa yang disertai opsi investasi agar rencana keuangan lebih fleksibel.',
-    wa: 'https://wa.me/6282255291890?text=Halo%2C%20saya%20baru%20isi%20QnA%20dan%20ingin%20tanya%20tentang%20MDSA.'
+    wa: 'https://wa.me/6287781896087?text=Pak%20Petrus%20saya%20tertarik%20asuransi'
   },
   syariah: {
     title: 'MiSmart Insurance Solution Syariah / MiUltimate HealthCare Syariah',
     desc: 'Pilihan menarik jika Anda mengutamakan perlindungan dan pengelolaan dana dengan prinsip syariah.',
-    wa: 'https://wa.me/6282255291890?text=Halo%2C%20saya%20baru%20isi%20QnA%20dan%20ingin%20tanya%20tentang%20produk%20syariah.'
+    wa: 'https://wa.me/6287781896087?text=Pak%20Petrus%20saya%20tertarik%20asuransi'
   }
 };
 
