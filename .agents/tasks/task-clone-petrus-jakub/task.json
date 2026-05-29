@@ -1,0 +1,14 @@
+{
+  "task_id": "task-clone-petrus-jakub",
+  "task_description": "Rebrand the Stella Elsya Manulife website to Petrus Jakub, Partner Bisnis Manulife. Update all content, links, photos, and add WhatsApp sticky banner and floating icon.",
+  "status": "completed",
+  "verification": {
+    "build": "pass",
+    "tests": "pass",
+    "test_quality": "pass",
+    "docker_build": "skipped",
+    "summary": "All old references (Stella Elsya, Senior Manulife Agent, 6282255291890, Kalimantan Barat, Certified Financial Planner, 19 tahun, COT) removed from all files. New branding (Petrus Jakub, Partner Bisnis Manulife, 087781896087, Jakarta, haipetrus.netlify.app) confirmed present. Floating WA icon and sticky banner added to both pages."
+  },
+  "feature_order": ["FEAT-002", "FEAT-003"],
+  "blocked_reason": null
+}
