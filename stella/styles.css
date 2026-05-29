@@ -936,7 +936,7 @@ address {
   position: fixed;
   bottom: 76px;
   right: 20px;
-  z-index: 100;
+  z-index: 99;
   width: 56px;
   height: 56px;
   display: grid;
