@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee Affiliate - 7 Day Content Plan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #ee4d2d 0%, #ff6633 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, #ee4d2d, #ff6633);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .schedule-nav {
+            background: rgba(255,255,255,0.95);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .schedule-nav h3 {
+            font-size: 0.9rem;
+            color: #ee4d2d;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            padding: 6px 14px;
+            background: linear-gradient(135deg, #ee4d2d, #ff6633);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .nav-links a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(238, 77, 45, 0.4);
+        }
+
+        .day-header {
+            background: rgba(255,255,255,0.95);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            margin-top: 32px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .day-header h2 {
+            font-size: 1.3rem;
+            color: #ee4d2d;
+        }
+
+        .post-card {
+            background: rgba(255,255,255,0.97);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #ee4d2d;
+        }
+
+        .post-card.hidden-task {
+            display: none;
+        }
+
+        .post-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .post-time {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #ee4d2d;
+        }
+
+        .post-number {
+            background: linear-gradient(135deg, #ee4d2d, #ff6633);
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #999;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .content-box {
+            background: #f8f9ff;
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 14px;
+            border: 1px solid #e8ecff;
+            line-height: 1.6;
+            font-size: 0.92rem;
+            word-break: break-word;
+        }
+
+        .content-box.link-box {
+            background: #fff8f0;
+            border-color: #ffe0b2;
+        }
+
+        .content-box.caption-box {
+            background: #f0fff4;
+            border-color: #b2f5ea;
+        }
+
+        .field-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+
+        .field-row .content-box {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        .btn-copy-inline {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+            flex-shrink: 0;
+            align-self: center;
+        }
+
+        .btn-copy-nama {
+            background: linear-gradient(135deg, #ee4d2d, #ff6633);
+            color: #fff;
+        }
+
+        .btn-copy-nama:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(238, 77, 45, 0.4);
+        }
+
+        .btn-copy-link {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: #fff;
+        }
+
+        .btn-copy-link:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(245, 87, 108, 0.4);
+        }
+
+        .btn-copy-caption {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            color: #fff;
+        }
+
+        .btn-copy-caption:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(56, 239, 125, 0.4);
+        }
+
+        .btn-hide {
+            display: block;
+            width: 100%;
+            margin-top: 12px;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #f0f0f0;
+            color: #666;
+            text-align: center;
+        }
+
+        .btn-hide:hover {
+            background: #e0e0e0;
+        }
+
+        .btn-copy-inline.copied,
+        .btn-hide.copied {
+            background: #4caf50 !important;
+            color: #fff !important;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #333;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            z-index: 9999;
+            transition: transform 0.3s ease;
+            pointer-events: none;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .show-all-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: rgba(255,255,255,0.9);
+            border: 2px dashed #ee4d2d;
+            border-radius: 12px;
+            color: #ee4d2d;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            transition: all 0.2s;
+        }
+
+        .show-all-btn:hover {
+            background: #fff;
+            border-color: #ff6633;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+            header h1 {
+                font-size: 1.4rem;
+            }
+            .post-card {
+                padding: 18px;
+            }
+            .post-time {
+                font-size: 1.2rem;
+            }
+            .field-row {
+                flex-direction: column;
+            }
+            .btn-copy-inline {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Shopee Affiliate - Content Plan</h1>
+            <p>7 Hari Full Posting Schedule</p>
+            <p style="margin-top: 6px; font-size: 0.85rem; color: #888;">3 Post/Hari: 07:00, 12:00, 19:00</p>
+        </header>
+
+        <nav class="schedule-nav">
+            <h3>Navigasi Postingan</h3>
+            <div class="nav-links">
+                <a href="#post-1">H1 - 07:00</a>
+                <a href="#post-2">H1 - 12:00</a>
+                <a href="#post-3">H1 - 19:00</a>
+                <a href="#post-4">H2 - 07:00</a>
+                <a href="#post-5">H2 - 12:00</a>
+                <a href="#post-6">H2 - 19:00</a>
+                <a href="#post-7">H3 - 07:00</a>
+                <a href="#post-8">H3 - 12:00</a>
+                <a href="#post-9">H3 - 19:00</a>
+                <a href="#post-10">H4 - 07:00</a>
+                <a href="#post-11">H4 - 12:00</a>
+                <a href="#post-12">H4 - 19:00</a>
+                <a href="#post-13">H5 - 07:00</a>
+                <a href="#post-14">H5 - 12:00</a>
+                <a href="#post-15">H5 - 19:00</a>
+                <a href="#post-16">H6 - 07:00</a>
+                <a href="#post-17">H6 - 12:00</a>
+                <a href="#post-18">H6 - 19:00</a>
+                <a href="#post-19">H7 - 07:00</a>
+                <a href="#post-20">H7 - 12:00</a>
+                <a href="#post-21">H7 - 19:00</a>
+            </div>
+        </nav>
+
+        <!-- ===== HARI 1 ===== -->
+        <div class="day-header"><h2>Hari 1</h2></div>
+
+        <div class="post-card" id="post-1">
+            <div class="post-header">
+                <span class="post-time">07:00</span>
+                <span class="post-number">1</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-1">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-1', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-1">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-1', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-1">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-1', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <div class="post-card" id="post-2">
+            <div class="post-header">
+                <span class="post-time">12:00</span>
+                <span class="post-number">2</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-2">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-2', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-2">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-2', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-2">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-2', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <div class="post-card" id="post-3">
+            <div class="post-header">
+                <span class="post-time">19:00</span>
+                <span class="post-number">3</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-3">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-3', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-3">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-3', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-3">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-3', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <!-- ===== HARI 2 ===== -->
+        <div class="day-header"><h2>Hari 2</h2></div>
+
+        <div class="post-card" id="post-4">
+            <div class="post-header">
+                <span class="post-time">07:00</span>
+                <span class="post-number">4</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-4">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-4', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-4">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-4', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-4">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-4', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <div class="post-card" id="post-5">
+            <div class="post-header">
+                <span class="post-time">12:00</span>
+                <span class="post-number">5</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-5">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-5', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-5">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-5', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-5">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-5', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <div class="post-card" id="post-6">
+            <div class="post-header">
+                <span class="post-time">19:00</span>
+                <span class="post-number">6</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-6">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-6', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-6">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-6', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-6">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-6', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <!-- ===== HARI 3 ===== -->
+        <div class="day-header"><h2>Hari 3</h2></div>
+
+        <div class="post-card" id="post-7">
+            <div class="post-header">
+                <span class="post-time">07:00</span>
+                <span class="post-number">7</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-7">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-7', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-7">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-7', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-7">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-7', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <div class="post-card" id="post-8">
+            <div class="post-header">
+                <span class="post-time">12:00</span>
+                <span class="post-number">8</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-8">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-8', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-8">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-8', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-8">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-8', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <div class="post-card" id="post-9">
+            <div class="post-header">
+                <span class="post-time">19:00</span>
+                <span class="post-number">9</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-9">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-9', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-9">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-9', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-9">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-9', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <!-- ===== HARI 4 ===== -->
+        <div class="day-header"><h2>Hari 4</h2></div>
+
+        <div class="post-card" id="post-10">
+            <div class="post-header">
+                <span class="post-time">07:00</span>
+                <span class="post-number">10</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-10">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-10', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-10">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-10', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-10">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-10', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <div class="post-card" id="post-11">
+            <div class="post-header">
+                <span class="post-time">12:00</span>
+                <span class="post-number">11</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-11">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-11', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-11">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-11', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-11">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-11', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <div class="post-card" id="post-12">
+            <div class="post-header">
+                <span class="post-time">19:00</span>
+                <span class="post-number">12</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-12">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-12', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-12">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-12', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-12">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-12', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <!-- ===== HARI 5 ===== -->
+        <div class="day-header"><h2>Hari 5</h2></div>
+
+        <div class="post-card" id="post-13">
+            <div class="post-header">
+                <span class="post-time">07:00</span>
+                <span class="post-number">13</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-13">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-13', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-13">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-13', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-13">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-13', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <div class="post-card" id="post-14">
+            <div class="post-header">
+                <span class="post-time">12:00</span>
+                <span class="post-number">14</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-14">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-14', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-14">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-14', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-14">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-14', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <div class="post-card" id="post-15">
+            <div class="post-header">
+                <span class="post-time">19:00</span>
+                <span class="post-number">15</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-15">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-15', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-15">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-15', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-15">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-15', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <!-- ===== HARI 6 ===== -->
+        <div class="day-header"><h2>Hari 6</h2></div>
+
+        <div class="post-card" id="post-16">
+            <div class="post-header">
+                <span class="post-time">07:00</span>
+                <span class="post-number">16</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-16">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-16', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-16">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-16', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-16">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-16', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <div class="post-card" id="post-17">
+            <div class="post-header">
+                <span class="post-time">12:00</span>
+                <span class="post-number">17</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-17">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-17', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-17">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-17', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-17">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-17', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <div class="post-card" id="post-18">
+            <div class="post-header">
+                <span class="post-time">19:00</span>
+                <span class="post-number">18</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-18">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-18', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-18">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-18', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-18">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-18', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <!-- ===== HARI 7 ===== -->
+        <div class="day-header"><h2>Hari 7</h2></div>
+
+        <div class="post-card" id="post-19">
+            <div class="post-header">
+                <span class="post-time">07:00</span>
+                <span class="post-number">19</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-19">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-19', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-19">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-19', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-19">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-19', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <div class="post-card" id="post-20">
+            <div class="post-header">
+                <span class="post-time">12:00</span>
+                <span class="post-number">20</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-20">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-20', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-20">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-20', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-20">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-20', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <div class="post-card" id="post-21">
+            <div class="post-header">
+                <span class="post-time">19:00</span>
+                <span class="post-number">21</span>
+            </div>
+            <div class="section-label">Nama Barang</div>
+            <div class="field-row">
+                <div class="content-box" id="nama-21">Masukkan nama barang di sini</div>
+                <button class="btn-copy-inline btn-copy-nama" onclick="copyText('nama-21', this)">Copy</button>
+            </div>
+            <div class="section-label">Link Barang</div>
+            <div class="field-row">
+                <div class="content-box link-box" id="link-21">Masukkan link Shopee di sini</div>
+                <button class="btn-copy-inline btn-copy-link" onclick="copyText('link-21', this)">Copy</button>
+            </div>
+            <div class="section-label">Caption</div>
+            <div class="field-row">
+                <div class="content-box caption-box" id="caption-21">Masukkan caption di sini</div>
+                <button class="btn-copy-inline btn-copy-caption" onclick="copyText('caption-21', this)">Copy</button>
+            </div>
+            <button class="btn-hide" onclick="hideTask(this)">Selesai / Sembunyikan &#10003;</button>
+        </div>
+
+        <button class="show-all-btn" onclick="showAllTasks()">&#128260; Tampilkan Semua Post yang Disembunyikan</button>
+    </div>
+
+    <div class="toast" id="toast">Berhasil dicopy!</div>
+
+    <script>
+        function copyText(elementId, btn) {
+            var text = document.getElementById(elementId).innerText;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(function() {
+                    showCopied(btn);
+                }).catch(function() {
+                    fallbackCopy(text, btn);
+                });
+            } else {
+                fallbackCopy(text, btn);
+            }
+        }
+
+        function fallbackCopy(text, btn) {
+            var textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showCopied(btn);
+            } catch(e) {
+                showToast('Gagal copy, coba manual');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        function showCopied(btn) {
+            var originalText = btn.innerText;
+            btn.classList.add('copied');
+            btn.innerText = 'Tercopy!';
+            showToast('Berhasil dicopy!');
+            setTimeout(function() {
+                btn.classList.remove('copied');
+                btn.innerText = originalText;
+            }, 2000);
+        }
+
+        function showToast(message) {
+            var toast = document.getElementById('toast');
+            toast.innerText = message;
+            toast.classList.add('show');
+            setTimeout(function() {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+
+        function hideTask(btn) {
+            var card = btn.closest('.post-card');
+            card.classList.add('hidden-task');
+            showToast('Post disembunyikan!');
+        }
+
+        function showAllTasks() {
+            var cards = document.querySelectorAll('.post-card.hidden-task');
+            cards.forEach(function(card) {
+                card.classList.remove('hidden-task');
+            });
+            showToast('Semua post ditampilkan!');
+        }
+    </script>
+</body>
+</html>
