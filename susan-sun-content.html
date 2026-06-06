@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susan Sun - 1 Day Content Plan (Facebook)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .schedule-nav {
+            background: rgba(255,255,255,0.95);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .schedule-nav h3 {
+            font-size: 0.9rem;
+            color: #764ba2;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            padding: 6px 14px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .nav-links a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .post-card {
+            background: rgba(255,255,255,0.97);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .post-card.hidden-task {
+            display: none;
+        }
+
+        .post-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .post-time {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #764ba2;
+        }
+
+        .post-number {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #999;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .caption-box, .prompt-box {
+            background: #f8f9ff;
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 14px;
+            border: 1px solid #e8ecff;
+            line-height: 1.6;
+            font-size: 0.92rem;
+        }
+
+        .prompt-box {
+            background: #fff8f0;
+            border-color: #ffe0b2;
+            font-style: italic;
+        }
+
+        .pinterest-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #e60023;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 14px;
+            padding: 6px 12px;
+            background: #fff0f0;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+
+        .pinterest-link:hover {
+            background: #ffe0e0;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .btn-copy {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-copy-caption {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+        }
+
+        .btn-copy-caption:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-copy-prompt {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: #fff;
+        }
+
+        .btn-copy-prompt:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(245, 87, 108, 0.4);
+        }
+
+        .btn-hide {
+            background: #f0f0f0;
+            color: #666;
+        }
+
+        .btn-hide:hover {
+            background: #e0e0e0;
+        }
+
+        .btn-copy.copied {
+            background: #4caf50 !important;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #333;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            z-index: 9999;
+            transition: transform 0.3s ease;
+            pointer-events: none;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .show-all-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: rgba(255,255,255,0.9);
+            border: 2px dashed #764ba2;
+            border-radius: 12px;
+            color: #764ba2;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.2s;
+        }
+
+        .show-all-btn:hover {
+            background: #fff;
+            border-color: #667eea;
+        }
+
+        .church-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700, #ffaa00);
+            color: #333;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+            header h1 {
+                font-size: 1.4rem;
+            }
+            .post-card {
+                padding: 18px;
+            }
+            .post-time {
+                font-size: 1.2rem;
+            }
+            .btn-group {
+                flex-direction: column;
+            }
+            .btn-copy {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Susan Sun - Content Plan</h1>
+            <p>1 Day Full Posting Schedule (Facebook) - Minggu</p>
+            <p style="margin-top: 6px; font-size: 0.85rem; color: #888;">Target: Engagement + Tambah Follower | Interval ~60 menit</p>
+        </header>
+
+        <nav class="schedule-nav">
+            <h3>Jadwal Posting</h3>
+            <div class="nav-links">
+                <a href="#post-1">06:00</a>
+                <a href="#post-2">07:05</a>
+                <a href="#post-3">08:10</a>
+                <a href="#post-4">09:15</a>
+                <a href="#post-5">10:20</a>
+                <a href="#post-6">11:30</a>
+                <a href="#post-7">12:45</a>
+                <a href="#post-8">13:50</a>
+                <a href="#post-9">15:00</a>
+                <a href="#post-10">16:10</a>
+                <a href="#post-11">17:20</a>
+                <a href="#post-12">18:30</a>
+                <a href="#post-13">19:40</a>
+                <a href="#post-14">20:45</a>
+                <a href="#post-15">21:50</a>
+            </div>
+        </nav>
+
+        <!-- Post 1 -->
+        <div class="post-card" id="post-1">
+            <div class="post-header">
+                <span class="post-time">06:00</span>
+                <span class="post-number">1</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-1">Pagi-pagi buta udah bangun, bukan karena rajin... tapi karena ayam tetangga nggak tau hari Minggu itu hari libur. Tapi ya sudahlah, sekalian menikmati sunrise sambil ngopi. Siapa yang senasib? Angkat cangkirnya! &#9749;&#127749;
+
+#PagiMinggu #SusanSun #NgopiBahagia #SunriseVibes</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-1">Susan pakai outfit image 2, sedang memegang cangkir kopi di balkon rumah dengan latar image 3 (selfie sendiri, angle dari atas, cahaya sunrise golden hour)</div>
+            <a href="https://www.pinterest.com/search/pins/?q=morning%20coffee%20balcony%20outfit%20aesthetic" target="_blank" rel="noopener" class="pinterest-link">&#128205; Pinterest: Morning Coffee Balcony Aesthetic</a>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-1', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-1', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="post-card" id="post-2">
+            <div class="post-header">
+                <span class="post-time">07:05</span>
+                <span class="post-number">2</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-2">Kalau kamu bunga, kamu bunga apa?
+Aku? Bunga kredit. &#128553;&#128176;
+
+Becanda yaa haha! Semangat hari Minggu semuanya! Hari ini mau ngapain? Komen di bawah, nanti aku kasih emoji sesuai rencana kamu! &#128071;
+
+#MingguSeru #SusanSun #InteraktifDong #HariLibur</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-2">Susan pakai outfit image 2, sedang tertawa lepas di taman bunga dengan latar image 3 (difotoin dari samping, candid moment, banyak bunga warna-warni)</div>
+            <a href="https://www.pinterest.com/search/pins/?q=flower%20garden%20candid%20photo%20outfit" target="_blank" rel="noopener" class="pinterest-link">&#128205; Pinterest: Flower Garden Candid Photo</a>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-2', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-2', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="post-card" id="post-3">
+            <div class="post-header">
+                <span class="post-time">08:10<span class="church-badge">&#9962; Gereja</span></span>
+                <span class="post-number">3</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-3">Minggu pagi yang indah! Persiapan ke gereja dulu. Ada yang bilang "biar Tuhan yang atur"... tapi outfit tetep harus diatur sendiri ya kan? &#128519;&#128591;
+
+Selamat beribadah buat yang ke gereja juga! Semoga hari ini penuh berkat untuk kita semua. &#10024;
+
+#SundayService #SusanSun #BlessedSunday #OOTD</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-3">Susan pakai outfit image 2, sedang berdiri di depan cermin mempersiapkan diri dengan latar image 3 (selfie di cermin, look rapi dan sopan untuk gereja, cahaya pagi masuk dari jendela)</div>
+            <a href="https://www.pinterest.com/search/pins/?q=sunday%20church%20outfit%20modest%20elegant" target="_blank" rel="noopener" class="pinterest-link">&#128205; Pinterest: Sunday Church Outfit Elegant</a>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-3', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-3', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 4 -->
+        <div class="post-card" id="post-4">
+            <div class="post-header">
+                <span class="post-time">09:15<span class="church-badge">&#9962; Gereja</span></span>
+                <span class="post-number">4</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-4">Di gereja hari ini khotbahnya tentang bersyukur. Dan aku bersyukur banget... karena AC gereja dinginnya pas. &#128514;&#128588;
+
+Tapi beneran ya, kadang kita lupa bersyukur untuk hal-hal kecil. Hari ini, kamu bersyukur untuk apa? Tulis di komen! &#128588;&#10024;
+
+#Bersyukur #SundayBlessing #SusanSun #ChurchVibes</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-4">Susan pakai outfit image 2, sedang duduk di bangku gereja dengan ekspresi damai dengan latar image 3 (difotoin dari belakang agak samping, interior gereja elegan, cahaya stained glass)</div>
+            <a href="https://www.pinterest.com/search/pins/?q=church%20interior%20aesthetic%20stained%20glass" target="_blank" rel="noopener" class="pinterest-link">&#128205; Pinterest: Church Interior Aesthetic</a>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-4', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-4', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 5 -->
+        <div class="post-card" id="post-5">
+            <div class="post-header">
+                <span class="post-time">10:20</span>
+                <span class="post-number">5</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-5">Pantun Minggu:
+
+Beli roti di toko sebelah,
+Kasirnya senyum ramah sekali.
+Hidup ini jangan terlalu gelisah,
+Nikmati saja perlahan-lahan hari ini. &#128522;&#127800;
+
+Siapa bisa balas pantun? Aku tunggu! &#128071;
+
+#PantunMinggu #SusanSun #MainPantun #WeekendVibes</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-5">Susan pakai outfit image 2, sedang berjalan santai di trotoar kota sambil pegang paper bag dengan latar image 3 (ada orang lain Indonesia tidak sadar kamera di belakang, suasana pagi weekend di kota)</div>
+            <a href="https://www.pinterest.com/search/pins/?q=casual%20street%20style%20walking%20weekend" target="_blank" rel="noopener" class="pinterest-link">&#128205; Pinterest: Casual Street Style Weekend</a>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-5', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-5', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 6 -->
+        <div class="post-card" id="post-6">
+            <div class="post-header">
+                <span class="post-time">11:30</span>
+                <span class="post-number">6</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-6">Tag temen kamu yang kalo diajak makan selalu bilang "terserah" tapi pas dipilihin bilang "jangan itu". &#128580;&#127829;
+
+Aku tau ada minimal 3 orang di kepala kamu sekarang. Tag mereka! Biar mereka tau dosa-dosa mereka. &#128514;
+
+#FoodieProblems #SusanSun #TemanMakan #Relatable</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-6">Susan pakai outfit image 2, sedang melihat menu di restoran dengan ekspresi bingung lucu dengan latar image 3 (selfie, di restoran cozy, meja sudah ada makanan sedikit)</div>
+            <a href="https://www.pinterest.com/search/pins/?q=cozy%20restaurant%20brunch%20aesthetic%20outfit" target="_blank" rel="noopener" class="pinterest-link">&#128205; Pinterest: Cozy Restaurant Brunch</a>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-6', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-6', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 7 -->
+        <div class="post-card" id="post-7">
+            <div class="post-header">
+                <span class="post-time">12:45</span>
+                <span class="post-number">7</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-7">POV: kamu mau diet tapi ibumu masak nasi goreng spesial hari Minggu.
+
+Dietnya: &#128128;
+Nasi gorengnya: &#128081;&#127834;
+
+Sudahlah, diet mulai Senin aja. Lagi. Untuk yang ke-847 kalinya. &#128517;
+
+Yang relate like ya! Kita senasib. &#129309;
+
+#DietGagal #SusanSun #NasiGorengIsLife #MingguMakan</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-7">Susan pakai outfit image 2, sedang makan nasi goreng di meja makan rumah dengan ekspresi bahagia dengan latar image 3 (difotoin dari depan, meja penuh makanan rumahan, suasana hangat keluarga)</div>
+            <a href="https://www.pinterest.com/search/pins/?q=indonesian%20home%20dining%20table%20family%20meal" target="_blank" rel="noopener" class="pinterest-link">&#128205; Pinterest: Indonesian Home Dining Aesthetic</a>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-7', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-7', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 8 -->
+        <div class="post-card" id="post-8">
+            <div class="post-header">
+                <span class="post-time">13:50</span>
+                <span class="post-number">8</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-8">Kata orang: "Istirahat itu penting."
+Aku: *rebahan sambil scroll FB*
+Juga aku: "Kok capek ya padahal nggak ngapa-ngapain?" &#128564;&#128248;
+
+Ini bukan malas, ini namanya healing versi low budget. Yang setuju, kasih &#128153;
+
+#RebahanIsHealing #SusanSun #SundayChill #LowBudgetHealing</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-8">Susan pakai outfit image 2, sedang rebahan di sofa sambil pegang handphone dengan ekspresi santai dengan latar image 3 (selfie angle dari atas, sofa nyaman, bantal-bantal lucu, ruangan terang)</div>
+            <a href="https://www.pinterest.com/search/pins/?q=cozy%20living%20room%20sofa%20relax%20aesthetic" target="_blank" rel="noopener" class="pinterest-link">&#128205; Pinterest: Cozy Living Room Relax</a>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-8', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-8', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 9 -->
+        <div class="post-card" id="post-9">
+            <div class="post-header">
+                <span class="post-time">15:00</span>
+                <span class="post-number">9</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-9">Aku percaya setiap orang punya cerita masing-masing. Ada yang lagi di puncak, ada yang lagi di lembah. Tapi yang pasti, matahari selalu terbit lagi besok. &#127773;
+
+Untuk kamu yang lagi berjuang, aku mau bilang: kamu hebat. Kamu nggak sendirian. Tetap semangat ya! &#128150;
+
+Kalau postingan ini nyentuh hatimu, share ke orang yang butuh. &#128591;
+
+#SusanSun #Motivasi #KamuHebat #TetapSemangat</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-9">Susan pakai outfit image 2, sedang berdiri menghadap sunset di pinggir danau dengan latar image 3 (difotoin dari belakang, siluet, langit orange keunguan, suasana tenang dan damai)</div>
+            <a href="https://www.pinterest.com/search/pins/?q=sunset%20lake%20silhouette%20peaceful%20aesthetic" target="_blank" rel="noopener" class="pinterest-link">&#128205; Pinterest: Sunset Lake Silhouette Peaceful</a>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-9', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-9', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 10 -->
+        <div class="post-card" id="post-10">
+            <div class="post-header">
+                <span class="post-time">16:10</span>
+                <span class="post-number">10</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-10">GAMES TIME! &#127918;
+
+Coba tulis nama kamu di komen TANPA huruf "A". Bisa nggak?
+
+Contoh: Susxn Sun &#128517;
+
+Yang berhasil tanpa huruf A, aku kasih love! Yang gagal... ya tertawa aja bareng-bareng &#128514;&#128514;
+
+#GamesFB #SusanSun #InteraktifSeru #MainBareng</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-10">Susan pakai outfit image 2, sedang duduk di cafe outdoor sambil menunjuk ke kamera dengan senyum jahil dengan latar image 3 (selfie, background cafe aesthetic, ada tanaman hijau)</div>
+            <a href="https://www.pinterest.com/search/pins/?q=cafe%20outdoor%20aesthetic%20green%20plants%20style" target="_blank" rel="noopener" class="pinterest-link">&#128205; Pinterest: Cafe Outdoor Aesthetic Green</a>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-10', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-10', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 11 -->
+        <div class="post-card" id="post-11">
+            <div class="post-header">
+                <span class="post-time">17:20</span>
+                <span class="post-number">11</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-11">Sore-sore gini enaknya:
+A. Ngopi &#9749;
+B. Makan gorengan &#129473;
+C. Jalan-jalan &#128694;
+D. Lanjut rebahan &#128564;
+
+Aku sih D. Nggak usah bohong, kamu juga kan? &#128514;
+
+Vote di komen! Yang paling banyak aku bikinin konten besok! &#128071;
+
+#SoreSore #SusanSun #PollTime #WeekendMood</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-11">Susan pakai outfit image 2, sedang jalan sore di taman kota yang hijau dengan latar image 3 (ada orang lain Indonesia tidak sadar kamera sedang jogging di belakang, cahaya sore keemasan)</div>
+            <a href="https://www.pinterest.com/search/pins/?q=afternoon%20park%20walk%20golden%20hour%20style" target="_blank" rel="noopener" class="pinterest-link">&#128205; Pinterest: Afternoon Park Golden Hour</a>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-11', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-11', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 12 -->
+        <div class="post-card" id="post-12">
+            <div class="post-header">
+                <span class="post-time">18:30</span>
+                <span class="post-number">12</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-12">Puisi sore dari Susan:
+
+Langit senja berwarna jingga,
+Angin sepoi membelai rasa.
+Hari Minggu hampir berlalu,
+Tapi hatiku masih terjaga.
+
+Untuk semua yang hari ini beristirahat,
+Dan untuk yang tetap bekerja,
+Kalian semua berhak bahagia. &#127773;&#128156;
+
+#PuisiSore #SusanSun #SenjaIndah #KataSenja</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-12">Susan pakai outfit image 2, sedang duduk di rooftop cafe menikmati sunset dengan latar image 3 (difotoin dari samping, profil wajah kena cahaya golden hour, langit senja dramatis)</div>
+            <a href="https://www.pinterest.com/search/pins/?q=rooftop%20sunset%20golden%20hour%20portrait%20aesthetic" target="_blank" rel="noopener" class="pinterest-link">&#128205; Pinterest: Rooftop Sunset Portrait</a>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-12', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-12', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 13 -->
+        <div class="post-card" id="post-13">
+            <div class="post-header">
+                <span class="post-time">19:40</span>
+                <span class="post-number">13</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-13">Hari ini di gereja aku belajar satu hal penting: bersyukur bukan karena hidup sempurna, tapi karena di setiap ketidaksempurnaan, ada Tuhan yang setia menemani. &#128591;&#10024;
+
+Malam Minggu ini, aku mau challenge kamu: tulis 1 hal yang kamu syukuri hari ini di komen. Sekecil apapun! Aku mulai duluan: aku syukur masih bisa ketawa hari ini. &#128522;
+
+#GratefulHeart #SusanSun #SundayReflection #Bersyukur</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-13">Susan pakai outfit image 2, sedang menulis di jurnal kecil di meja dengan cahaya lilin dengan latar image 3 (selfie angle miring, suasana malam tenang, warm lighting, ada tanaman kecil di meja)</div>
+            <a href="https://www.pinterest.com/search/pins/?q=journaling%20candle%20light%20cozy%20evening%20aesthetic" target="_blank" rel="noopener" class="pinterest-link">&#128205; Pinterest: Journaling Evening Cozy</a>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-13', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-13', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 14 -->
+        <div class="post-card" id="post-14">
+            <div class="post-header">
+                <span class="post-time">20:45</span>
+                <span class="post-number">14</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-14">Kalau hidup ini film, genre kamu hari ini apa?
+
+Aku hari ini: romantis-komedi. Romantis sama kasur, komedi sama isi kulkas yang tinggal sambel doang. &#128514;&#127798;
+
+Drop genre kamu di komen! Besok aku recap yang paling kocak. &#127916;&#128071;
+
+#GenreHidup #SusanSun #RecapBesok #RandomBanget</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-14">Susan pakai outfit image 2, sedang nonton TV di ruang tamu sambil pegang remote dengan ekspresi seru dengan latar image 3 (difotoin candid, sofa nyaman, lampu warm, ada selimut)</div>
+            <a href="https://www.pinterest.com/search/pins/?q=cozy%20movie%20night%20living%20room%20aesthetic" target="_blank" rel="noopener" class="pinterest-link">&#128205; Pinterest: Cozy Movie Night Living Room</a>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-14', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-14', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 15 -->
+        <div class="post-card" id="post-15">
+            <div class="post-header">
+                <span class="post-time">21:50</span>
+                <span class="post-number">15</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-15">Sebelum tidur, aku mau bilang:
+
+Terima kasih sudah menemani hari ini. Entah kamu cuma scroll, atau like, atau komen, aku appreciate banget. &#128150;
+
+Besok Senin lagi. Tapi tenang, kita hadapi bareng-bareng ya! Selamat istirahat, mimpi indah. Tuhan memberkati kita semua. &#128591;&#127769;&#10024;
+
+Besok ketemu lagi! Good night, beautiful people! &#128148;
+
+#GoodNight #SusanSun #SelamatTidur #SampaiJumpaBesok #GodBless</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-15">Susan pakai outfit image 2, sedang duduk di tepi tempat tidur dengan selimut sambil senyum lembut ke kamera dengan latar image 3 (selfie malam, lampu tidur warm, kamar rapi aesthetic, vibes calm)</div>
+            <a href="https://www.pinterest.com/search/pins/?q=cozy%20bedroom%20night%20aesthetic%20warm%20light" target="_blank" rel="noopener" class="pinterest-link">&#128205; Pinterest: Cozy Bedroom Night Aesthetic</a>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-15', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-15', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <button class="show-all-btn" onclick="showAllTasks()">&#128260; Tampilkan Semua Task yang Disembunyikan</button>
+    </div>
+
+    <div class="toast" id="toast">Berhasil dicopy!</div>
+
+    <script>
+        function copyText(elementId, btn) {
+            var text = document.getElementById(elementId).innerText;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(function() {
+                    showCopied(btn);
+                }).catch(function() {
+                    fallbackCopy(text, btn);
+                });
+            } else {
+                fallbackCopy(text, btn);
+            }
+        }
+
+        function fallbackCopy(text, btn) {
+            var textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showCopied(btn);
+            } catch(e) {
+                showToast('Gagal copy, coba manual');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        function showCopied(btn) {
+            var originalText = btn.innerText;
+            btn.classList.add('copied');
+            btn.innerText = 'Tercopy!';
+            showToast('Berhasil dicopy!');
+            setTimeout(function() {
+                btn.classList.remove('copied');
+                btn.innerText = originalText;
+            }, 2000);
+        }
+
+        function showToast(message) {
+            var toast = document.getElementById('toast');
+            toast.innerText = message;
+            toast.classList.add('show');
+            setTimeout(function() {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+
+        function hideTask(btn) {
+            var card = btn.closest('.post-card');
+            card.classList.add('hidden-task');
+            showToast('Task disembunyikan!');
+        }
+
+        function showAllTasks() {
+            var cards = document.querySelectorAll('.post-card.hidden-task');
+            cards.forEach(function(card) {
+                card.classList.remove('hidden-task');
+            });
+            showToast('Semua task ditampilkan!');
+        }
+    </script>
+</body>
+</html>
