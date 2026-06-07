@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ngobras.santuy - 1 Day Threads Content Plan</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #222;
+        }
+
+        .container { max-width: 820px; margin: 0 auto; }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255,255,255,0.97);
+            border-radius: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+        }
+
+        header h1 {
+            font-size: 1.9rem;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        header p { color: #555; font-size: 0.95rem; }
+
+        .meta-pill {
+            display: inline-block;
+            margin: 4px 4px 0;
+            padding: 4px 12px;
+            background: #eef6ff;
+            color: #0072ff;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
+        .progress-wrap {
+            background: rgba(255,255,255,0.97);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .progress-bar-bg {
+            background: #e8ecf3;
+            border-radius: 20px;
+            height: 14px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            border-radius: 20px;
+            transition: width 0.4s ease;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.82rem;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .schedule-nav {
+            background: rgba(255,255,255,0.97);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .schedule-nav h3 {
+            font-size: 0.9rem;
+            color: #0072ff;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links { display: flex; flex-wrap: wrap; gap: 8px; }
+
+        .nav-links a {
+            display: inline-block;
+            padding: 6px 14px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .nav-links a:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,114,255,0.4); }
+
+        .post-card {
+            background: rgba(255,255,255,0.98);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            border-left: 4px solid #0072ff;
+        }
+
+        .post-card.hidden-task { display: none; }
+        .post-card.done { border-left-color: #4caf50; opacity: 0.75; }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .post-time { font-size: 1.4rem; font-weight: 700; color: #0072ff; }
+        .post-number {
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: #fff;
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.85rem; font-weight: 700;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-left: 8px;
+            vertical-align: middle;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge-hook { background: #fff3e0; color: #e65100; }
+        .badge-engage { background: #e8f5e9; color: #2e7d32; }
+        .badge-edu { background: #e3f2fd; color: #1565c0; }
+        .badge-lead { background: #fce4ec; color: #c2185b; }
+
+        .section-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #999;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .caption-box {
+            background: #f6faff;
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 14px;
+            border: 1px solid #e1ecf7;
+            line-height: 1.65;
+            font-size: 0.94rem;
+            white-space: pre-wrap;
+        }
+
+        .reply-box {
+            background: #f3f6f9;
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 14px;
+            border: 1px dashed #c7d4e0;
+            line-height: 1.6;
+            font-size: 0.88rem;
+            white-space: pre-wrap;
+            color: #444;
+        }
+
+        .tip {
+            font-size: 0.8rem;
+            color: #777;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .btn-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+
+        .btn {
+            padding: 9px 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-copy-caption { background: linear-gradient(135deg, #00c6ff, #0072ff); color: #fff; }
+        .btn-copy-caption:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,114,255,0.4); }
+
+        .btn-copy-reply { background: linear-gradient(135deg, #43cea2, #185a9d); color: #fff; }
+        .btn-copy-reply:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(24,90,157,0.4); }
+
+        .btn-open { background: linear-gradient(135deg, #f093fb, #f5576c); color: #fff; }
+        .btn-open:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(245,87,108,0.4); }
+
+        .btn-hide { background: #eef0f3; color: #555; }
+        .btn-hide:hover { background: #e2e5ea; }
+
+        .btn.copied { background: #4caf50 !important; }
+
+        .toast {
+            position: fixed;
+            bottom: 30px; left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #222; color: #fff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            z-index: 9999;
+            transition: transform 0.3s ease;
+            pointer-events: none;
+        }
+        .toast.show { transform: translateX(-50%) translateY(0); }
+
+        .controls-bar {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .control-btn {
+            flex: 1;
+            min-width: 140px;
+            padding: 12px;
+            background: rgba(255,255,255,0.92);
+            border: none;
+            border-radius: 12px;
+            color: #0072ff;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .control-btn:hover { background: #fff; transform: translateY(-1px); }
+
+        .link-note {
+            background: #fff8f0;
+            border: 1px solid #ffe0b2;
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 24px;
+            font-size: 0.88rem;
+            color: #6d4c00;
+            line-height: 1.6;
+        }
+        .link-note a { color: #c2185b; font-weight: 700; word-break: break-all; }
+
+        @media (max-width: 600px) {
+            body { padding: 12px; }
+            header h1 { font-size: 1.4rem; }
+            .post-card { padding: 18px; }
+            .post-time { font-size: 1.2rem; }
+            .btn-group { flex-direction: column; }
+            .btn { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>@ngobras.santuy</h1>
+            <p>Threads Content Plan &mdash; 1 Hari Full</p>
+            <div style="margin-top: 10px;">
+                <span class="meta-pill">&#127919; Goal: Leads Asuransi</span>
+                <span class="meta-pill">&#128101; Tambah Follower</span>
+                <span class="meta-pill">&#9203; Jeda 30 menit</span>
+                <span class="meta-pill">&#128274; Posting Aman</span>
+            </div>
+        </header>
+
+        <div class="link-note">
+            &#128279; <strong>Link tujuan (CTA leads):</strong>
+            <a href="https://projectcuan.petrusjakub.workers.dev/" target="_blank" rel="noopener">https://projectcuan.petrusjakub.workers.dev/</a><br>
+            &#128161; <strong>Strategi aman:</strong> jangan taruh link di SETIAP post. Mayoritas post = hook &amp; engagement (bangun trust + follower). Link hanya di post bertanda <span class="badge badge-lead" style="margin:0;">LEADS</span>. Sisanya arahkan ke "link di bio" / "komen/DM" biar natural &amp; tidak ke-flag spam.
+        </div>
+
+        <div class="progress-wrap">
+            <div class="progress-label">
+                <span>Progress hari ini</span>
+                <span id="progress-text">0 / 14 selesai</span>
+            </div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill"></div></div>
+        </div>
+
+        <div class="controls-bar">
+            <button class="control-btn" onclick="showAll()">&#128065; Tampilkan Semua</button>
+            <button class="control-btn" onclick="resetAll()">&#128260; Reset Progress</button>
+        </div>
+
+        <nav class="schedule-nav">
+            <h3>Jadwal Posting (Jeda 30 Menit)</h3>
+            <div class="nav-links">
+                <a href="#post-1">07:00</a>
+                <a href="#post-2">07:30</a>
+                <a href="#post-3">08:00</a>
+                <a href="#post-4">11:30</a>
+                <a href="#post-5">12:00</a>
+                <a href="#post-6">12:30</a>
+                <a href="#post-7">13:00</a>
+                <a href="#post-8">17:00</a>
+                <a href="#post-9">17:30</a>
+                <a href="#post-10">18:00</a>
+                <a href="#post-11">18:30</a>
+                <a href="#post-12">19:00</a>
+                <a href="#post-13">19:30</a>
+                <a href="#post-14">20:00</a>
+            </div>
+        </nav>
+
+        <!-- Post 1 -->
+        <div class="post-card" id="post-1">
+            <div class="post-header">
+                <span class="post-time">07:00<span class="badge badge-hook">Hook Pagi</span></span>
+                <span class="post-number">1</span>
+            </div>
+            <div class="section-label">Caption Threads</div>
+            <div class="caption-box" id="caption-1">Umur 25 aku pikir nabung di rekening = aman.
+
+Umur 30 baru sadar: 1x masuk rumah sakit, tabungan 3 tahun ludes dalam 5 hari. &#128557;
+
+Gaji naik tiap tahun, tapi kenapa rasanya makin gak punya apa-apa ya?
+
+Ada yang ngerasa sama? &#128071;</div>
+            <div class="tip">Tip: Post pembuka pagi. Murni hook + relate, TANPA link. Tujuan: pancing komen sebanyak mungkin biar reach naik seharian.</div>
+            <div class="btn-group">
+                <button class="btn btn-copy-caption" onclick="copyText('caption-1', this)">&#128203; Copy Caption</button>
+                <button class="btn btn-hide" onclick="toggleDone(this)">&#10003; Selesai / Hide</button>
+            </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="post-card" id="post-2">
+            <div class="post-header">
+                <span class="post-time">07:30<span class="badge badge-engage">Engage</span></span>
+                <span class="post-number">2</span>
+            </div>
+            <div class="section-label">Caption Threads</div>
+            <div class="caption-box" id="caption-2">Pertanyaan receh tapi serius:
+
+Kalau besok kamu gak bisa kerja selama 6 bulan (sakit/kecelakaan), kamu masih bisa bayar cicilan & makan dari tabungan sekarang gak?
+
+Jawab jujur:
+&#9989; Bisa, aman
+&#10060; Wah... gak kepikiran
+
+No judge, aku dulu juga jawab yang bawah &#128517;</div>
+            <div class="tip">Tip: Poll-style bikin orang wajib komen. Balas tiap komen "&#10060;" dengan empati (lihat reply template di bawah) buat buka percakapan ke arah solusi.</div>
+            <div class="section-label">Template Balas Komen</div>
+            <div class="reply-box" id="reply-2">Samaa, aku dulu persis kayak gini sampe kejadian sendiri baru nyesel. Btw aku ada tulisan simpel soal "dana darurat vs proteksi" yang ngebantu banget waktu itu, mau aku share? &#128156;</div>
+            <div class="btn-group">
+                <button class="btn btn-copy-caption" onclick="copyText('caption-2', this)">&#128203; Copy Caption</button>
+                <button class="btn btn-copy-reply" onclick="copyText('reply-2', this)">&#128172; Copy Balasan</button>
+                <button class="btn btn-hide" onclick="toggleDone(this)">&#10003; Selesai / Hide</button>
+            </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="post-card" id="post-3">
+            <div class="post-header">
+                <span class="post-time">08:00<span class="badge badge-edu">Edukasi</span></span>
+                <span class="post-number">3</span>
+            </div>
+            <div class="section-label">Caption Threads (Utas/Thread)</div>
+            <div class="caption-box" id="caption-3">3 kesalahan finansial yang aku sesali di umur 20an (biar kamu gak ngalamin) &#129504;
+
+1. Mikir "masih muda, sehat, ngapain asuransi" &mdash; sampai temenku kecelakaan & keluarganya jual rumah buat biaya RS.
+
+2. Nunggu "gajian gede dulu" baru proteksi diri. Padahal makin tua makin mahal preminya.
+
+3. Percaya tabungan doang cukup. Inflasi medis itu 10-13% per tahun, tabungan kamu gak ngejar.
+
+Simpan post ini buat pengingat ya &#128150;</div>
+            <div class="tip">Tip: Konten value tinggi = paling sering di-save & share = ngangkat follower. Tetap tanpa link, biar Threads anggap konten "berkualitas" bukan promosi.</div>
+            <div class="btn-group">
+                <button class="btn btn-copy-caption" onclick="copyText('caption-3', this)">&#128203; Copy Caption</button>
+                <button class="btn btn-hide" onclick="toggleDone(this)">&#10003; Selesai / Hide</button>
+            </div>
+        </div>
+
+        <!-- Post 4 -->
+        <div class="post-card" id="post-4">
+            <div class="post-header">
+                <span class="post-time">11:30<span class="badge badge-hook">Hook Siang</span></span>
+                <span class="post-number">4</span>
+            </div>
+            <div class="section-label">Caption Threads</div>
+            <div class="caption-box" id="caption-4">Story time singkat &#128072;
+
+Tetangga sebelah, bapak 2 anak, kena serangan jantung mendadak. Sehat, gak ngerokok, rajin olahraga.
+
+Biaya RS 3 minggu: 280 juta.
+
+Yang bikin nyesek bukan angkanya, tapi istrinya bilang: "Coba dulu kita ambil asuransi pas ditawarin..."
+
+Jangan tunggu jadi "coba dulu" ya. &#128557;</div>
+            <div class="tip">Tip: Storytelling emosional jam makan siang. Akhiri dengan emosi, bukan jualan. Lead datang dari rasa, bukan dari paksaan.</div>
+            <div class="btn-group">
+                <button class="btn btn-copy-caption" onclick="copyText('caption-4', this)">&#128203; Copy Caption</button>
+                <button class="btn btn-hide" onclick="toggleDone(this)">&#10003; Selesai / Hide</button>
+            </div>
+        </div>
+
+        <!-- Post 5 -->
+        <div class="post-card" id="post-5">
+            <div class="post-header">
+                <span class="post-time">12:00<span class="badge badge-lead">Leads</span></span>
+                <span class="post-number">5</span>
+            </div>
+            <div class="section-label">Caption Threads (dengan Link)</div>
+            <div class="caption-box" id="caption-5">Banyak yang DM nanya: "Mulai dari mana sih kalau mau proteksi tapi gaptek soal asuransi?"
+
+Jadi aku rapihin semua info dasarnya di 1 halaman simpel &mdash; gak ribet, gak maksa, tinggal baca-baca dulu santai:
+
+&#128073; https://projectcuan.petrusjakub.workers.dev/
+
+Cek aja dulu, gratis. Kalau cocok, ngobrol. Kalau belum, gpp &mdash; minimal kamu jadi ngerti &#128156;</div>
+            <div class="tip">Tip: INI post leads utama jam ramai. Link ditaruh natural setelah kasih value seharian. Soft-CTA "cek dulu gratis" lebih aman & lebih ngeklik daripada "beli sekarang".</div>
+            <div class="btn-group">
+                <button class="btn btn-copy-caption" onclick="copyText('caption-5', this)">&#128203; Copy Caption</button>
+                <a class="btn btn-open" href="https://projectcuan.petrusjakub.workers.dev/" target="_blank" rel="noopener">&#128279; Buka Web</a>
+                <button class="btn btn-hide" onclick="toggleDone(this)">&#10003; Selesai / Hide</button>
+            </div>
+        </div>
+
+        <!-- Post 6 -->
+        <div class="post-card" id="post-6">
+            <div class="post-header">
+                <span class="post-time">12:30<span class="badge badge-engage">Engage</span></span>
+                <span class="post-number">6</span>
+            </div>
+            <div class="section-label">Caption Threads</div>
+            <div class="caption-box" id="caption-6">Tebak-tebakan:
+
+Mana yang lebih kamu prioritasin sekarang?
+&#127873; Beli HP/gadget baru
+&#9992;&#65039; Liburan
+&#127968; DP rumah
+&#128737;&#65039; Proteksi kesehatan keluarga
+
+Gak ada yang salah kok, aku cuma penasaran prioritas orang-orang. Komen hurufnya aja &#128071;</div>
+            <div class="tip">Tip: Konten ringan habis post leads, biar feed gak kerasa "jualan terus". Komen = sinyal positif algoritma. Yang jawab proteksi = calon lead hangat, sapa di DM.</div>
+            <div class="btn-group">
+                <button class="btn btn-copy-caption" onclick="copyText('caption-6', this)">&#128203; Copy Caption</button>
+                <button class="btn btn-hide" onclick="toggleDone(this)">&#10003; Selesai / Hide</button>
+            </div>
+        </div>
+
+        <!-- Post 7 -->
+        <div class="post-card" id="post-7">
+            <div class="post-header">
+                <span class="post-time">13:00<span class="badge badge-edu">Edukasi</span></span>
+                <span class="post-number">7</span>
+            </div>
+            <div class="section-label">Caption Threads</div>
+            <div class="caption-box" id="caption-7">Mitos asuransi yang bikin orang takut, padahal salah &#128563;
+
+&#10060; "Asuransi itu buang uang"
+&#9989; Itu yang gak ngerti cara milihnya. Yang tepat = uang kamu kerja, bukan hangus.
+
+&#10060; "Mahal, gaji UMR gak kekejar"
+&#9989; Sekarang ada yang mulai dari harga 2x ngopi sebulan.
+
+&#10060; "Ribet klaimnya"
+&#9989; Sekarang banyak yang cashless, tinggal gesek kartu di RS.
+
+Yang masih ragu, komen "T" aku jelasin pelan-pelan &#128156;</div>
+            <div class="tip">Tip: Bongkar keberatan (objection) secara halus. Yang komen "T" = sangat hangat. Arahkan ke web / DM.</div>
+            <div class="btn-group">
+                <button class="btn btn-copy-caption" onclick="copyText('caption-7', this)">&#128203; Copy Caption</button>
+                <button class="btn btn-hide" onclick="toggleDone(this)">&#10003; Selesai / Hide</button>
+            </div>
+        </div>
+
+        <!-- Post 8 -->
+        <div class="post-card" id="post-8">
+            <div class="post-header">
+                <span class="post-time">17:00<span class="badge badge-hook">Hook Sore</span></span>
+                <span class="post-number">8</span>
+            </div>
+            <div class="section-label">Caption Threads</div>
+            <div class="caption-box" id="caption-8">Hal paling dewasa yang pernah aku lakuin bukan beli mobil atau healing ke Bali.
+
+Tapi pas aku akhirnya mutusin: "Kalau aku kenapa-kenapa, keluargaku gak boleh ikut susah."
+
+Diam-diam, itu bentuk sayang yang paling gak keliatan. &#128150;
+
+Setuju gak? &#128072;</div>
+            <div class="tip">Tip: Reframe asuransi jadi "bentuk cinta", bukan produk. Emosional & relatable = banyak yang quote/repost.</div>
+            <div class="btn-group">
+                <button class="btn btn-copy-caption" onclick="copyText('caption-8', this)">&#128203; Copy Caption</button>
+                <button class="btn btn-hide" onclick="toggleDone(this)">&#10003; Selesai / Hide</button>
+            </div>
+        </div>
+
+        <!-- Post 9 -->
+        <div class="post-card" id="post-9">
+            <div class="post-header">
+                <span class="post-time">17:30<span class="badge badge-engage">Engage</span></span>
+                <span class="post-number">9</span>
+            </div>
+            <div class="section-label">Caption Threads</div>
+            <div class="caption-box" id="caption-9">Jujur-jujuran dong:
+
+Berapa sih dana darurat ideal menurut kamu?
+A. 3x gaji
+B. 6x gaji
+C. 12x gaji
+D. Apa itu dana darurat &#128514;
+
+Yang jawab D, tenang, kita satu circle &#128591; aku bahas pelan-pelan di komen ya.</div>
+            <div class="tip">Tip: Self-deprecating humor ("kita satu circle") bikin akun terasa manusiawi & relatable = follower naik. Balas komen aktif 15 menit pertama.</div>
+            <div class="btn-group">
+                <button class="btn btn-copy-caption" onclick="copyText('caption-9', this)">&#128203; Copy Caption</button>
+                <button class="btn btn-hide" onclick="toggleDone(this)">&#10003; Selesai / Hide</button>
+            </div>
+        </div>
+
+        <!-- Post 10 -->
+        <div class="post-card" id="post-10">
+            <div class="post-header">
+                <span class="post-time">18:00<span class="badge badge-edu">Edukasi</span></span>
+                <span class="post-number">10</span>
+            </div>
+            <div class="section-label">Caption Threads</div>
+            <div class="caption-box" id="caption-10">Checklist proteksi dasar yang HARUS kamu punya sebelum mikir investasi &#128221;
+
+&#9989; Dana darurat (3-6x pengeluaran)
+&#9989; Asuransi kesehatan (biar tabungan gak kebobol pas sakit)
+&#9989; Asuransi jiwa (kalau kamu tulang punggung)
+&#9989; BPJS tetap jalan (komplemen, bukan satu-satunya)
+
+Investasi itu nomor 5. Banyak yang lompat ke 5 tanpa 1-4, pas ada musibah langsung ambyar. &#128557;
+
+Save dulu ya!</div>
+            <div class="tip">Tip: Konten checklist = magnet save & share. Posisikan diri sebagai "teman yang ngerti", bukan sales.</div>
+            <div class="btn-group">
+                <button class="btn btn-copy-caption" onclick="copyText('caption-10', this)">&#128203; Copy Caption</button>
+                <button class="btn btn-hide" onclick="toggleDone(this)">&#10003; Selesai / Hide</button>
+            </div>
+        </div>
+
+        <!-- Post 11 -->
+        <div class="post-card" id="post-11">
+            <div class="post-header">
+                <span class="post-time">18:30<span class="badge badge-lead">Leads</span></span>
+                <span class="post-number">11</span>
+            </div>
+            <div class="section-label">Caption Threads (dengan Link)</div>
+            <div class="caption-box" id="caption-11">Karena tadi banyak yang nanya "mulai dari mana", aku taruh sekali lagi ya biar gak ketinggalan &#128072;
+
+Aku siapin halaman simpel buat kamu yang mau ngerti proteksi diri & keluarga TANPA dipaksa beli:
+
+&#128073; https://projectcuan.petrusjakub.workers.dev/
+
+Baca santai, hitung-hitung sendiri. Kalau ada yang mau ditanya, DM aku terbuka 24 jam &#128156;</div>
+            <div class="tip">Tip: Post leads kedua di prime time malam. Tambah "DM terbuka" = jalur lead kedua selain web. Maksimal 2-3 post berlink sehari biar aman.</div>
+            <div class="btn-group">
+                <button class="btn btn-copy-caption" onclick="copyText('caption-11', this)">&#128203; Copy Caption</button>
+                <a class="btn btn-open" href="https://projectcuan.petrusjakub.workers.dev/" target="_blank" rel="noopener">&#128279; Buka Web</a>
+                <button class="btn btn-hide" onclick="toggleDone(this)">&#10003; Selesai / Hide</button>
+            </div>
+        </div>
+
+        <!-- Post 12 -->
+        <div class="post-card" id="post-12">
+            <div class="post-header">
+                <span class="post-time">19:00<span class="badge badge-engage">Engage</span></span>
+                <span class="post-number">12</span>
+            </div>
+            <div class="section-label">Caption Threads</div>
+            <div class="caption-box" id="caption-12">Unpopular opinion:
+
+"Gaji 5 juta" bisa lebih aman finansial daripada "gaji 50 juta" &mdash; kalau yang 50 juta gak punya proteksi & gaya hidupnya bocor terus.
+
+Bukan soal seberapa besar pemasukan, tapi seberapa rapi kamu jaga. &#128176;
+
+Setuju atau menolak? Debat sehat di komen &#128293;</div>
+            <div class="tip">Tip: "Unpopular opinion" = format viral Threads. Picu debat sehat = komen membludak = reach malam meledak.</div>
+            <div class="btn-group">
+                <button class="btn btn-copy-caption" onclick="copyText('caption-12', this)">&#128203; Copy Caption</button>
+                <button class="btn btn-hide" onclick="toggleDone(this)">&#10003; Selesai / Hide</button>
+            </div>
+        </div>
+
+        <!-- Post 13 -->
+        <div class="post-card" id="post-13">
+            <div class="post-header">
+                <span class="post-time">19:30<span class="badge badge-hook">Hook</span></span>
+                <span class="post-number">13</span>
+            </div>
+            <div class="section-label">Caption Threads</div>
+            <div class="caption-box" id="caption-13">Aku gak takut miskin karena males.
+
+Aku takut udah kerja keras bertahun-tahun, eh dalam semalam habis cuma gara-gara 1 musibah yang gak disiapin. &#128557;
+
+Kerja keras itu penting. Tapi melindungi hasil kerja keras? Itu yang sering dilupain.
+
+Yang lagi struggle, kamu gak sendiri. Semangat ya &#128170;</div>
+            <div class="tip">Tip: Tutup hari dengan vibe suportif. Bangun kedekatan emosional = orang follow karena "ngerasa dimengerti".</div>
+            <div class="btn-group">
+                <button class="btn btn-copy-caption" onclick="copyText('caption-13', this)">&#128203; Copy Caption</button>
+                <button class="btn btn-hide" onclick="toggleDone(this)">&#10003; Selesai / Hide</button>
+            </div>
+        </div>
+
+        <!-- Post 14 -->
+        <div class="post-card" id="post-14">
+            <div class="post-header">
+                <span class="post-time">20:00<span class="badge badge-engage">Engage + CTA</span></span>
+                <span class="post-number">14</span>
+            </div>
+            <div class="section-label">Caption Threads</div>
+            <div class="caption-box" id="caption-14">Makasih buat yang udah ngobrol seharian di sini &#128156;
+
+Akun ini bakal terus bahas: ngatur duit, proteksi diri, & hidup tenang tanpa drama finansial &mdash; dengan bahasa santai, gak menggurui.
+
+Kalau itu kamu banget, follow biar gak ketinggalan ya. Besok kita ngobrol santuy lagi &#9749;
+
+Btw, satu hal yang kamu pelajarin hari ini apa? Komen dong &#128071;</div>
+            <div class="tip">Tip: Post penutup = ajakan follow eksplisit + recap value. Pertanyaan terakhir biar komen tetap masuk semalaman. Tanpa link (biar aman, link udah di 2 post tadi + bio).</div>
+            <div class="btn-group">
+                <button class="btn btn-copy-caption" onclick="copyText('caption-14', this)">&#128203; Copy Caption</button>
+                <button class="btn btn-hide" onclick="toggleDone(this)">&#10003; Selesai / Hide</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="toast" id="toast">Tersalin!</div>
+
+    <script>
+        var STORAGE_KEY = 'ngobras_santuy_done_v1';
+        var TOTAL = 14;
+
+        function copyText(id, btn) {
+            var el = document.getElementById(id);
+            var text = el.innerText;
+            navigator.clipboard.writeText(text).then(function () {
+                showToast('Tersalin ke clipboard!');
+                var original = btn.innerHTML;
+                btn.classList.add('copied');
+                btn.innerHTML = '&#10003; Tersalin';
+                setTimeout(function () {
+                    btn.classList.remove('copied');
+                    btn.innerHTML = original;
+                }, 1500);
+            }).catch(function () {
+                // Fallback for older browsers
+                var ta = document.createElement('textarea');
+                ta.value = text;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                showToast('Tersalin!');
+            });
+        }
+
+        function showToast(msg) {
+            var t = document.getElementById('toast');
+            t.textContent = msg;
+            t.classList.add('show');
+            clearTimeout(t._timer);
+            t._timer = setTimeout(function () { t.classList.remove('show'); }, 1800);
+        }
+
+        function getDone() {
+            try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; }
+            catch (e) { return []; }
+        }
+
+        function setDone(arr) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+        }
+
+        function toggleDone(btn) {
+            var card = btn.closest('.post-card');
+            var id = card.id;
+            var done = getDone();
+            var idx = done.indexOf(id);
+            if (idx === -1) {
+                done.push(id);
+                card.classList.add('hidden-task');
+            } else {
+                done.splice(idx, 1);
+            }
+            setDone(done);
+            updateProgress();
+        }
+
+        function applyDone() {
+            var done = getDone();
+            done.forEach(function (id) {
+                var card = document.getElementById(id);
+                if (card) card.classList.add('hidden-task');
+            });
+            updateProgress();
+        }
+
+        function showAll() {
+            var cards = document.querySelectorAll('.post-card');
+            cards.forEach(function (c) { c.classList.remove('hidden-task'); });
+            showToast('Semua task ditampilkan');
+        }
+
+        function resetAll() {
+            setDone([]);
+            showAll();
+            updateProgress();
+            showToast('Progress direset');
+        }
+
+        function updateProgress() {
+            var done = getDone().length;
+            var pct = Math.round((done / TOTAL) * 100);
+            document.getElementById('progress-fill').style.width = pct + '%';
+            document.getElementById('progress-text').textContent = done + ' / ' + TOTAL + ' selesai';
+        }
+
+        applyDone();
+    </script>
+</body>
+</html>
