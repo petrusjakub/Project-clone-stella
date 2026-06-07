@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anindita - 1 Day Content Plan (Facebook)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .schedule-nav {
+            background: rgba(255,255,255,0.95);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .schedule-nav h3 {
+            font-size: 0.9rem;
+            color: #764ba2;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            padding: 6px 14px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .nav-links a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .post-card {
+            background: rgba(255,255,255,0.97);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .post-card.hidden-task {
+            display: none;
+        }
+
+        .post-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .post-time {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #764ba2;
+        }
+
+        .post-number {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #999;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .caption-box, .prompt-box {
+            background: #f8f9ff;
+            border-radius: 12px;
+            padding: 14px 16px;
+            margin-bottom: 14px;
+            border: 1px solid #e8ecff;
+            line-height: 1.6;
+            font-size: 0.92rem;
+        }
+
+        .prompt-box {
+            background: #fff8f0;
+            border-color: #ffe0b2;
+            font-style: italic;
+        }
+
+        .pinterest-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+
+        .pinterest-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #e60023;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 6px 12px;
+            background: #fff0f0;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+
+        .pinterest-link:hover {
+            background: #ffe0e0;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .btn-copy {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-copy-caption {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+        }
+
+        .btn-copy-caption:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-copy-prompt {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: #fff;
+        }
+
+        .btn-copy-prompt:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(245, 87, 108, 0.4);
+        }
+
+        .btn-hide {
+            background: #f0f0f0;
+            color: #666;
+        }
+
+        .btn-hide:hover {
+            background: #e0e0e0;
+        }
+
+        .btn-copy.copied {
+            background: #4caf50 !important;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #333;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            z-index: 9999;
+            transition: transform 0.3s ease;
+            pointer-events: none;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .show-all-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: rgba(255,255,255,0.9);
+            border: 2px dashed #764ba2;
+            border-radius: 12px;
+            color: #764ba2;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.2s;
+        }
+
+        .show-all-btn:hover {
+            background: #fff;
+            border-color: #667eea;
+        }
+
+        .outfit-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffd700, #ffaa00);
+            color: #333;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+            header h1 {
+                font-size: 1.4rem;
+            }
+            .post-card {
+                padding: 18px;
+            }
+            .post-time {
+                font-size: 1.2rem;
+            }
+            .btn-group {
+                flex-direction: column;
+            }
+            .btn-copy {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Anindita - Content Plan</h1>
+            <p>1 Day Full Posting Schedule (Facebook)</p>
+            <p style="margin-top: 6px; font-size: 0.85rem; color: #888;">Target: Engagement + Tambah Follower | Interval ~60 menit</p>
+            <p style="margin-top: 4px; font-size: 0.8rem; color: #aaa;">Persona: Princess girl, anak Mami, Jakarta, pemalu &amp; introvert</p>
+        </header>
+
+        <nav class="schedule-nav">
+            <h3>Jadwal Posting</h3>
+            <div class="nav-links">
+                <a href="#post-1">09:00</a>
+                <a href="#post-2">10:05</a>
+                <a href="#post-3">11:10</a>
+                <a href="#post-4">12:15</a>
+                <a href="#post-5">13:20</a>
+                <a href="#post-6">14:30</a>
+                <a href="#post-7">15:40</a>
+                <a href="#post-8">16:45</a>
+                <a href="#post-9">17:50</a>
+                <a href="#post-10">19:00</a>
+                <a href="#post-11">20:05</a>
+                <a href="#post-12">21:10</a>
+                <a href="#post-13">22:15</a>
+                <a href="#post-14">23:20</a>
+                <a href="#post-15">00:00</a>
+            </div>
+        </nav>
+
+        <!-- Post 1 -->
+        <div class="post-card" id="post-1">
+            <div class="post-header">
+                <span class="post-time">09:00<span class="outfit-badge">&#128087; Outfit Siang</span></span>
+                <span class="post-number">1</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-1">Pagi semua... bangunnya agak telat karena semalam begadang mikirin sesuatu. Mikirin apa? Rahasia dong hehe &#128563;&#10024;
+
+Tapi hari ini moodnya bagus, jadi mau keluar rumah sebentar. Rare moment nih buat aku yang biasanya betah di kamar aja &#128517;
+
+Kalian pagi ini ngapain? Cerita dong, aku mau baca satu-satu &#128151;
+
+#PagiJakarta #Anindita #IntrovertKeluarRumah #RareMoment</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-1">anindita pakai outfit image 2, sedang berdiri di depan cermin sambil benerin rambut di latar image 3 (selfie di cermin kamar, cahaya pagi masuk dari jendela, kamar aesthetic rapi warna pastel) dan ada image 4 tas kecil di meja rias</div>
+            <div class="pinterest-links">
+                <a href="https://www.pinterest.com/search/pins/?q=korean%20feminine%20outfit%20soft%20pastel%20daily" target="_blank" rel="noopener" class="pinterest-link">&#128205; Outfit</a>
+                <a href="https://www.pinterest.com/search/pins/?q=aesthetic%20pastel%20bedroom%20morning%20light%20korean" target="_blank" rel="noopener" class="pinterest-link">&#128205; Latar</a>
+                <a href="https://www.pinterest.com/search/pins/?q=cute%20small%20handbag%20pastel%20aesthetic" target="_blank" rel="noopener" class="pinterest-link">&#128205; Item</a>
+            </div>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-1', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-1', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="post-card" id="post-2">
+            <div class="post-header">
+                <span class="post-time">10:05<span class="outfit-badge">&#128087; Outfit Siang</span></span>
+                <span class="post-number">2</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-2">Mami bilang: "Ndit, jangan di kamar terus, nanti jadi jamur."
+
+Ya Mami, aku jamur yang cantik dong &#128517;&#127800;
+
+Tapi hari ini nurut deh, udah keluar. Duduk cantik sambil ngopi. Introvert juga bisa healing kok, cuma versinya lebih kalem aja &#9749;&#128156;
+
+Kalian tim healing rame-rame atau sendirian? &#128071;
+
+#AnakMami #Anindita #IntrovertHealing #KopiSantai</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-2">anindita pakai outfit image 2, sedang duduk di cafe minimalis sambil pegang cangkir kopi di latar image 3 (difotoin dari depan agak samping, cafe aesthetic putih bersih, tanaman hijau di sudut) dan ada image 4 kopi latte art di meja</div>
+            <div class="pinterest-links">
+                <a href="https://www.pinterest.com/search/pins/?q=korean%20feminine%20casual%20outfit%20cafe%20date" target="_blank" rel="noopener" class="pinterest-link">&#128205; Outfit</a>
+                <a href="https://www.pinterest.com/search/pins/?q=minimalist%20white%20cafe%20interior%20aesthetic%20jakarta" target="_blank" rel="noopener" class="pinterest-link">&#128205; Latar</a>
+                <a href="https://www.pinterest.com/search/pins/?q=latte%20art%20coffee%20aesthetic%20cafe" target="_blank" rel="noopener" class="pinterest-link">&#128205; Item</a>
+            </div>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-2', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-2', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="post-card" id="post-3">
+            <div class="post-header">
+                <span class="post-time">11:10<span class="outfit-badge">&#128087; Outfit Siang</span></span>
+                <span class="post-number">3</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-3">Aku tuh orangnya pemalu banget. Tapi kalau udah kenal, berisiknya minta ampun &#128514;
+
+Relate nggak? Yang di luar kalem banget, tapi di chat rame sendiri &#128172;&#10024;
+
+Coba komen "HAI" kalau kamu juga gitu. Aku penasaran sebanyak apa kita yang senasib &#128064;&#128156;
+
+#PemaluTapiReceh #Anindita #IntrovertProblems #RelateBanget</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-3">anindita pakai outfit image 2, sedang duduk di kursi taman sambil senyum malu-malu ke kamera di latar image 3 (difotoin candid dari agak jauh, taman kota Jakarta hijau, ada orang lain Indonesia tidak sadar kamera jalan di belakang) dan ada image 4 buku novel di pangkuan</div>
+            <div class="pinterest-links">
+                <a href="https://www.pinterest.com/search/pins/?q=soft%20feminine%20outfit%20park%20casual%20korean" target="_blank" rel="noopener" class="pinterest-link">&#128205; Outfit</a>
+                <a href="https://www.pinterest.com/search/pins/?q=jakarta%20city%20park%20green%20aesthetic%20bench" target="_blank" rel="noopener" class="pinterest-link">&#128205; Latar</a>
+                <a href="https://www.pinterest.com/search/pins/?q=aesthetic%20novel%20book%20reading%20park" target="_blank" rel="noopener" class="pinterest-link">&#128205; Item</a>
+            </div>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-3', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-3', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 4 -->
+        <div class="post-card" id="post-4">
+            <div class="post-header">
+                <span class="post-time">12:15<span class="outfit-badge">&#128087; Outfit Siang</span></span>
+                <span class="post-number">4</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-4">Makan siang hari ini spesial karena... Mami yang masakin &#127834;&#128150;
+
+Nggak ada yang ngalahin masakan Mami. Mau restoran bintang 5 juga tetep kalah sama nasi goreng buatan Mami &#128557;&#10024;
+
+Yang setuju masakan ibu nomor satu, kasih &#128153; di komen! Yang kangen masakan ibunya, peluk virtual dari aku &#128591;
+
+#MasakanMami #Anindita #AnakMamiGarisKeras #NasiGorengMami</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-4">anindita pakai outfit image 2, sedang makan di meja makan rumah dengan senyum bahagia di latar image 3 (selfie dari atas, meja makan kayu dengan piring-piring makanan rumahan Indonesia, dapur bersih di belakang) dan ada image 4 nasi goreng di piring cantik</div>
+            <div class="pinterest-links">
+                <a href="https://www.pinterest.com/search/pins/?q=casual%20home%20outfit%20feminine%20soft%20korean" target="_blank" rel="noopener" class="pinterest-link">&#128205; Outfit</a>
+                <a href="https://www.pinterest.com/search/pins/?q=cozy%20indonesian%20home%20dining%20table%20aesthetic" target="_blank" rel="noopener" class="pinterest-link">&#128205; Latar</a>
+                <a href="https://www.pinterest.com/search/pins/?q=nasi%20goreng%20homemade%20aesthetic%20plate" target="_blank" rel="noopener" class="pinterest-link">&#128205; Item</a>
+            </div>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-4', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-4', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 5 -->
+        <div class="post-card" id="post-5">
+            <div class="post-header">
+                <span class="post-time">13:20<span class="outfit-badge">&#128087; Outfit Siang</span></span>
+                <span class="post-number">5</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-5">Tipe orang pas ditanya "Mau apa?":
+
+A. "Terserah kamu aja" &#128522;
+B. "Apa aja boleh" &#128519;
+C. "Kamu duluan deh" &#128563;
+D. Diem aja sampe ditanyain lagi &#128517;
+
+Aku? Semua di atas. Pemalu problems hehe &#128584;
+
+Kalian yang mana? Jawab jujur ya, aku nggak judge kok &#128071;&#128156;
+
+#PemaluProblems #Anindita #QuizTime #IntrovertThings</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-5">anindita pakai outfit image 2, sedang berdiri di lorong mall sambil pegang handphone dengan ekspresi bingung lucu di latar image 3 (selfie, lorong mall Jakarta modern dan bersih, ada orang lain Indonesia tidak sadar kamera lewat di belakang) dan ada image 4 paper bag kecil di tangan kiri</div>
+            <div class="pinterest-links">
+                <a href="https://www.pinterest.com/search/pins/?q=feminine%20soft%20outfit%20mall%20ootd%20korean" target="_blank" rel="noopener" class="pinterest-link">&#128205; Outfit</a>
+                <a href="https://www.pinterest.com/search/pins/?q=jakarta%20modern%20mall%20interior%20aesthetic%20bright" target="_blank" rel="noopener" class="pinterest-link">&#128205; Latar</a>
+                <a href="https://www.pinterest.com/search/pins/?q=cute%20paper%20bag%20shopping%20pastel" target="_blank" rel="noopener" class="pinterest-link">&#128205; Item</a>
+            </div>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-5', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-5', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 6 -->
+        <div class="post-card" id="post-6">
+            <div class="post-header">
+                <span class="post-time">14:30<span class="outfit-badge">&#128087; Outfit Siang</span></span>
+                <span class="post-number">6</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-6">Orang bilang aku pendiam. Padahal aku cuma selektif mau ngobrol sama siapa &#128584;&#10024;
+
+Tapi kalau udah nyaman... siap-siap denger cerita panjang x lebar x tinggi &#128514;
+
+Siapa yang sama? Yang diem-diem tapi sebenernya banyak mau diceritain? Sini-sini, aku dengerin &#128156;&#128172;
+
+#SelectiveExtrovert #Anindita #DiemDiemBawel #CeritaDong</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-6">anindita pakai outfit image 2, sedang duduk di bangku panjang outdoor sambil lihat ke samping dengan senyum tipis di latar image 3 (difotoin dari samping, area outdoor mall atau taman dengan pohon rindang, cahaya siang teduh) dan ada image 4 minuman boba di tangan kanan</div>
+            <div class="pinterest-links">
+                <a href="https://www.pinterest.com/search/pins/?q=korean%20soft%20girl%20outfit%20casual%20feminine" target="_blank" rel="noopener" class="pinterest-link">&#128205; Outfit</a>
+                <a href="https://www.pinterest.com/search/pins/?q=outdoor%20seating%20area%20trees%20aesthetic%20urban" target="_blank" rel="noopener" class="pinterest-link">&#128205; Latar</a>
+                <a href="https://www.pinterest.com/search/pins/?q=boba%20tea%20aesthetic%20drink%20cute" target="_blank" rel="noopener" class="pinterest-link">&#128205; Item</a>
+            </div>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-6', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-6', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 7 -->
+        <div class="post-card" id="post-7">
+            <div class="post-header">
+                <span class="post-time">15:40<span class="outfit-badge">&#128087; Outfit Siang</span></span>
+                <span class="post-number">7</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-7">Self-reminder hari ini:
+
+Nggak apa-apa jadi orang yang kalem. Nggak apa-apa butuh waktu sendiri. Nggak apa-apa nggak suka keramaian. Kamu tetap berharga, tetap layak disayang &#128150;&#127800;
+
+Ini buat aku, dan buat kamu yang sama kayak aku. Peluk jauh ya &#128591;&#10024;
+
+Share ke temenmu yang perlu dengar ini hari ini &#128071;
+
+#SelfLove #Anindita #IntrovertPower #KamuBerharga</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-7">anindita pakai outfit image 2, sedang berdiri menghadap jendela besar dengan cahaya sore masuk di latar image 3 (difotoin dari belakang agak samping, ruangan aesthetic dengan tirai tipis berkibar, cahaya golden hour lembut) dan ada image 4 bunga kecil di vas di dekat jendela</div>
+            <div class="pinterest-links">
+                <a href="https://www.pinterest.com/search/pins/?q=soft%20pastel%20outfit%20golden%20hour%20feminine" target="_blank" rel="noopener" class="pinterest-link">&#128205; Outfit</a>
+                <a href="https://www.pinterest.com/search/pins/?q=aesthetic%20room%20window%20golden%20hour%20curtain" target="_blank" rel="noopener" class="pinterest-link">&#128205; Latar</a>
+                <a href="https://www.pinterest.com/search/pins/?q=small%20flower%20vase%20aesthetic%20window%20sill" target="_blank" rel="noopener" class="pinterest-link">&#128205; Item</a>
+            </div>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-7', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-7', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 8 -->
+        <div class="post-card" id="post-8">
+            <div class="post-header">
+                <span class="post-time">16:45<span class="outfit-badge">&#127769; Outfit Malam</span></span>
+                <span class="post-number">8</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-8">Ganti outfit, ganti mood &#10024;&#128131;
+
+Sore ini feels different. Kayak ada sesuatu yang mau terjadi tapi belum tau apa. Excited tapi deg-degan juga hehe &#128563;&#128156;
+
+Pernah nggak sih ngerasa gitu? Kayak universe lagi nyiapin something... Semoga yang baik-baik ya &#128591;&#127769;
+
+#SoreVibes #Anindita #NewMood #FeelsGood</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-8">anindita pakai outfit image 2, sedang berdiri di rooftop cafe saat golden hour sambil pegang rambut tertiup angin di latar image 3 (difotoin dari depan, langit sore orange keunguan, city skyline Jakarta di belakang) dan ada image 4 gelas wine di pagar rooftop</div>
+            <div class="pinterest-links">
+                <a href="https://www.pinterest.com/search/pins/?q=elegant%20evening%20outfit%20feminine%20korean%20date" target="_blank" rel="noopener" class="pinterest-link">&#128205; Outfit</a>
+                <a href="https://www.pinterest.com/search/pins/?q=rooftop%20cafe%20sunset%20jakarta%20skyline%20golden%20hour" target="_blank" rel="noopener" class="pinterest-link">&#128205; Latar</a>
+                <a href="https://www.pinterest.com/search/pins/?q=wine%20glass%20sunset%20rooftop%20aesthetic" target="_blank" rel="noopener" class="pinterest-link">&#128205; Item</a>
+            </div>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-8', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-8', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 9 -->
+        <div class="post-card" id="post-9">
+            <div class="post-header">
+                <span class="post-time">17:50<span class="outfit-badge">&#127769; Outfit Malam</span></span>
+                <span class="post-number">9</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-9">Kalau aku diem, bukan berarti marah ya &#128517;
+
+Aku cuma lagi:
+1. Overthinking &#128564;
+2. Ngelamun &#127769;
+3. Bikin skenario yang nggak bakal kejadian &#128514;
+4. Semua di atas &#128584;
+
+Yang relate angkat tangan! Aku tau aku nggak sendirian &#128588;&#128156;
+
+#OverthinkingClub #Anindita #DiemBukanMarah #RelateKali</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-9">anindita pakai outfit image 2, sedang duduk di tepi jendela cafe sambil ngelamun melihat keluar di latar image 3 (difotoin candid dari dalam cafe, pemandangan jalan Jakarta sore hari dari jendela, warm lighting indoor) dan ada image 4 kopi di meja samping jendela</div>
+            <div class="pinterest-links">
+                <a href="https://www.pinterest.com/search/pins/?q=evening%20feminine%20outfit%20cafe%20window%20seat" target="_blank" rel="noopener" class="pinterest-link">&#128205; Outfit</a>
+                <a href="https://www.pinterest.com/search/pins/?q=cafe%20window%20seat%20city%20view%20evening%20warm%20light" target="_blank" rel="noopener" class="pinterest-link">&#128205; Latar</a>
+                <a href="https://www.pinterest.com/search/pins/?q=aesthetic%20coffee%20cup%20window%20evening" target="_blank" rel="noopener" class="pinterest-link">&#128205; Item</a>
+            </div>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-9', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-9', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 10 -->
+        <div class="post-card" id="post-10">
+            <div class="post-header">
+                <span class="post-time">19:00<span class="outfit-badge">&#127769; Outfit Malam</span></span>
+                <span class="post-number">10</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-10">Dinner time! Mami tanya mau makan apa, aku jawab: "Terserah Mami aja."
+
+5 menit kemudian Mami masak rendang. RENDANG. &#128557;&#128150;
+
+Ini kenapa aku nggak bisa move out dari rumah. Makanannya too good &#128514;&#127834;
+
+Yang masih tinggal sama ortu dan bersyukur tiap hari, like! &#128588;
+
+#DinnerTime #Anindita #MamiTheBest #MasakanRumah</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-10">anindita pakai outfit image 2, sedang duduk di meja makan dengan ekspresi excited melihat makanan di latar image 3 (selfie angle atas, meja makan dengan rendang dan lauk pauk, pencahayaan hangat ruang makan) dan ada image 4 mangkok rendang di depan</div>
+            <div class="pinterest-links">
+                <a href="https://www.pinterest.com/search/pins/?q=elegant%20casual%20evening%20outfit%20home%20dinner" target="_blank" rel="noopener" class="pinterest-link">&#128205; Outfit</a>
+                <a href="https://www.pinterest.com/search/pins/?q=warm%20dining%20room%20indonesian%20home%20dinner%20aesthetic" target="_blank" rel="noopener" class="pinterest-link">&#128205; Latar</a>
+                <a href="https://www.pinterest.com/search/pins/?q=rendang%20indonesian%20food%20aesthetic%20homemade" target="_blank" rel="noopener" class="pinterest-link">&#128205; Item</a>
+            </div>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-10', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-10', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 11 -->
+        <div class="post-card" id="post-11">
+            <div class="post-header">
+                <span class="post-time">20:05<span class="outfit-badge">&#127769; Outfit Malam</span></span>
+                <span class="post-number">11</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-11">GAMES! &#127918;
+
+Deskripsikan diri kamu dalam 3 emoji. Aku mulai:
+
+&#128584;&#128156;&#9749;
+(pemalu, sayang orang, butuh kopi)
+
+Sekarang giliran kamu! Drop di komen, aku tebak artinya ya &#128064;&#10024;
+
+Yang paling unik aku kasih love! &#128071;
+
+#GameEmoji #Anindita #MainBareng #DescribeYourself</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-11">anindita pakai outfit image 2, sedang rebahan di sofa sambil pegang handphone dan senyum ke layar di latar image 3 (selfie angle miring, ruang tamu cozy dengan bantal-bantal, lampu warm, tanaman indoor) dan ada image 4 selimut lembut di sofa</div>
+            <div class="pinterest-links">
+                <a href="https://www.pinterest.com/search/pins/?q=cozy%20home%20outfit%20evening%20feminine%20soft" target="_blank" rel="noopener" class="pinterest-link">&#128205; Outfit</a>
+                <a href="https://www.pinterest.com/search/pins/?q=cozy%20living%20room%20warm%20light%20sofa%20pillows%20aesthetic" target="_blank" rel="noopener" class="pinterest-link">&#128205; Latar</a>
+                <a href="https://www.pinterest.com/search/pins/?q=soft%20blanket%20cozy%20sofa%20aesthetic" target="_blank" rel="noopener" class="pinterest-link">&#128205; Item</a>
+            </div>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-11', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-11', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 12 -->
+        <div class="post-card" id="post-12">
+            <div class="post-header">
+                <span class="post-time">21:10<span class="outfit-badge">&#127769; Outfit Malam</span></span>
+                <span class="post-number">12</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-12">Malam-malam gini biasanya aku suka nulis diary. Bukan yang berat-berat, cuma hal-hal kecil yang bikin senyum hari ini &#128221;&#128150;
+
+Hari ini yang bikin senyum: 
+- Mami masakin rendang
+- Ada kucing lewat depan rumah terus ngeong ke aku
+- Baca komen kalian yang lucu-lucu &#128517;
+
+Coba tulis 1 hal yang bikin kamu senyum hari ini! Aku baca semua lho &#128064;&#10024;
+
+#DiaryMalam #Anindita #HalKecilBerarti #SenyumHariIni</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-12">anindita pakai outfit image 2, sedang menulis di buku diary di meja belajar dengan ekspresi fokus tapi tenang di latar image 3 (difotoin dari samping, kamar tidur aesthetic dengan string lights, meja rapi dengan stationery lucu) dan ada image 4 lilin aromatherapy menyala di meja</div>
+            <div class="pinterest-links">
+                <a href="https://www.pinterest.com/search/pins/?q=evening%20cozy%20outfit%20feminine%20pajama%20soft" target="_blank" rel="noopener" class="pinterest-link">&#128205; Outfit</a>
+                <a href="https://www.pinterest.com/search/pins/?q=aesthetic%20bedroom%20desk%20string%20lights%20diary%20korean" target="_blank" rel="noopener" class="pinterest-link">&#128205; Latar</a>
+                <a href="https://www.pinterest.com/search/pins/?q=aromatherapy%20candle%20aesthetic%20desk" target="_blank" rel="noopener" class="pinterest-link">&#128205; Item</a>
+            </div>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-12', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-12', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 13 -->
+        <div class="post-card" id="post-13">
+            <div class="post-header">
+                <span class="post-time">22:15<span class="outfit-badge">&#127769; Outfit Malam</span></span>
+                <span class="post-number">13</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-13">Pengakuan malam: aku tuh suka kepo scroll FB orang tapi nggak berani like apalagi komen &#128584;&#128517;
+
+Kalau nggak kenal, aku cuma jadi silent reader. Baru kalau udah kenal, baru berani interact &#128514;
+
+Yang juga silent reader tapi sebenernya kepo, like postingan ini sebagai tanda keberadaan kalian &#128064;&#128156;
+
+Yang berani komen, kalian pemberani. Aku salut! &#128079;
+
+#SilentReader #Anindita #KepoTapiMalu #IntrovertOnline</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-13">anindita pakai outfit image 2, sedang duduk di kasur dengan laptop di pangkuan sambil senyum kecil di latar image 3 (selfie, kamar tidur malam dengan lampu tidur menyala lembut, seprai putih bersih, suasana cozy) dan ada image 4 secangkir teh chamomile di nakas</div>
+            <div class="pinterest-links">
+                <a href="https://www.pinterest.com/search/pins/?q=cozy%20night%20outfit%20pajama%20set%20aesthetic%20cute" target="_blank" rel="noopener" class="pinterest-link">&#128205; Outfit</a>
+                <a href="https://www.pinterest.com/search/pins/?q=cozy%20bedroom%20night%20lamp%20aesthetic%20white%20sheets" target="_blank" rel="noopener" class="pinterest-link">&#128205; Latar</a>
+                <a href="https://www.pinterest.com/search/pins/?q=chamomile%20tea%20bedside%20table%20aesthetic%20night" target="_blank" rel="noopener" class="pinterest-link">&#128205; Item</a>
+            </div>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-13', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-13', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 14 -->
+        <div class="post-card" id="post-14">
+            <div class="post-header">
+                <span class="post-time">23:20<span class="outfit-badge">&#127769; Outfit Malam</span></span>
+                <span class="post-number">14</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-14">Hal yang bikin aku happy versi introvert:
+
+&#10003; Cancel plans (sorry not sorry &#128517;)
+&#10003; Hujan + selimut + drakor
+&#10003; Chat panjang sama 1 orang yang nyaman
+&#10003; Sendirian tapi nggak kesepian
+&#10003; Dapet like dari orang yang di-crush &#128563;
+
+Yang mau nambahin list, silakan! Aku penasaran versi kalian &#128071;&#128156;
+
+#IntrovertHappiness #Anindita #SmallJoys #HappyList</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-14">anindita pakai outfit image 2, sedang berbaring miring di kasur sambil nonton tablet dengan earphone di latar image 3 (selfie angle dekat, selimut tebal, lampu tidur warm, vibes kamar nyaman malam hari) dan ada image 4 boneka kecil di sebelah bantal</div>
+            <div class="pinterest-links">
+                <a href="https://www.pinterest.com/search/pins/?q=cute%20sleepwear%20pajama%20set%20feminine%20cozy" target="_blank" rel="noopener" class="pinterest-link">&#128205; Outfit</a>
+                <a href="https://www.pinterest.com/search/pins/?q=cozy%20bed%20night%20watching%20tablet%20warm%20blanket" target="_blank" rel="noopener" class="pinterest-link">&#128205; Latar</a>
+                <a href="https://www.pinterest.com/search/pins/?q=cute%20small%20plushie%20bed%20aesthetic" target="_blank" rel="noopener" class="pinterest-link">&#128205; Item</a>
+            </div>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-14', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-14', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <!-- Post 15 -->
+        <div class="post-card" id="post-15">
+            <div class="post-header">
+                <span class="post-time">00:00<span class="outfit-badge">&#127769; Outfit Malam</span></span>
+                <span class="post-number">15</span>
+            </div>
+            <div class="section-label">Caption FB</div>
+            <div class="caption-box" id="caption-15">Sebelum tidur, aku mau bilang sesuatu...
+
+Terima kasih ya udah mau baca cerita aku hari ini. Aku tau aku orangnya pendiam dan nggak banyak ngomong, tapi di sini aku merasa aman buat jadi diri sendiri &#128150;&#127769;
+
+Kalian yang udah like, komen, atau bahkan cuma baca diem-diem, aku sayang kalian semua &#128591;&#10024;
+
+Selamat tidur, mimpi indah. Besok kita ketemu lagi ya. Good night, precious people &#128156;&#127769;
+
+#GoodNight #Anindita #TerimaKasih #SampaiJumpa #SweetDreams</div>
+            <div class="section-label">Prompt Image</div>
+            <div class="prompt-box" id="prompt-15">anindita pakai outfit image 2, sedang duduk di tepi kasur sambil senyum lembut dan melambai kecil ke kamera di latar image 3 (selfie malam, kamar gelap dengan fairy lights di dinding, suasana tenang dan damai) dan ada image 4 buku di nakas dengan bookmark lucu</div>
+            <div class="pinterest-links">
+                <a href="https://www.pinterest.com/search/pins/?q=cute%20night%20pajama%20soft%20pastel%20feminine" target="_blank" rel="noopener" class="pinterest-link">&#128205; Outfit</a>
+                <a href="https://www.pinterest.com/search/pins/?q=bedroom%20fairy%20lights%20night%20aesthetic%20cozy%20dark" target="_blank" rel="noopener" class="pinterest-link">&#128205; Latar</a>
+                <a href="https://www.pinterest.com/search/pins/?q=book%20bookmark%20cute%20aesthetic%20bedside" target="_blank" rel="noopener" class="pinterest-link">&#128205; Item</a>
+            </div>
+            <div class="btn-group">
+                <button class="btn-copy btn-copy-caption" onclick="copyText('caption-15', this)">Copy Caption</button>
+                <button class="btn-copy btn-copy-prompt" onclick="copyText('prompt-15', this)">Copy Prompt</button>
+                <button class="btn-copy btn-hide" onclick="hideTask(this)">Hide Task &#10003;</button>
+            </div>
+        </div>
+
+        <button class="show-all-btn" onclick="showAllTasks()">&#128260; Tampilkan Semua Task yang Disembunyikan</button>
+    </div>
+
+    <div class="toast" id="toast">Berhasil dicopy!</div>
+
+    <script>
+        function copyText(elementId, btn) {
+            var text = document.getElementById(elementId).innerText;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(function() {
+                    showCopied(btn);
+                }).catch(function() {
+                    fallbackCopy(text, btn);
+                });
+            } else {
+                fallbackCopy(text, btn);
+            }
+        }
+
+        function fallbackCopy(text, btn) {
+            var textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showCopied(btn);
+            } catch(e) {
+                showToast('Gagal copy, coba manual');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        function showCopied(btn) {
+            var originalText = btn.innerText;
+            btn.classList.add('copied');
+            btn.innerText = 'Tercopy!';
+            showToast('Berhasil dicopy!');
+            setTimeout(function() {
+                btn.classList.remove('copied');
+                btn.innerText = originalText;
+            }, 2000);
+        }
+
+        function showToast(message) {
+            var toast = document.getElementById('toast');
+            toast.innerText = message;
+            toast.classList.add('show');
+            setTimeout(function() {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+
+        function hideTask(btn) {
+            var card = btn.closest('.post-card');
+            card.classList.add('hidden-task');
+            showToast('Task disembunyikan!');
+        }
+
+        function showAllTasks() {
+            var cards = document.querySelectorAll('.post-card.hidden-task');
+            cards.forEach(function(card) {
+                card.classList.remove('hidden-task');
+            });
+            showToast('Semua task ditampilkan!');
+        }
+    </script>
+</body>
+</html>
